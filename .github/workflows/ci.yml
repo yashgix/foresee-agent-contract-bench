@@ -1,0 +1,17 @@
+name: ci
+on: [push, pull_request]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.14"
+      - run: pip install -r requirements.lock ruff==0.17.4
+      - run: ruff check . && ruff format --check .
+      # Foresee's public documents are fetched, not stored here. If Foresee has changed them since the 10 Nov 2026
+      # capture, the tests that need the pinned versions skip and say so; the rest still run.
+      - run: python scripts/fetch_snapshot.py
+        continue-on-error: true
+      - run: python -m pytest -rs

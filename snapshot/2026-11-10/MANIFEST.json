@@ -1,0 +1,51 @@
+{
+  "captured": "2026-11-10, 23:00-23:30 ET",
+  "note": "Foresee's own public documents, kept unchanged for offline checks. Do not redistribute without Foresee's permission.",
+  "files": {
+    "tools-list.json": {
+      "source": "https://mcp.go-foresee.com/mcp (MCP tools/list)",
+      "method": "one MCP handshake: initialize, notifications/initialized, tools/list; no tools/call",
+      "sha256": "06213ca0152cb8fd3847a6b41598d800c497a1cf454c0b80bfc3074a59336765"
+    },
+    "initialize.json": {
+      "source": "https://mcp.go-foresee.com/mcp (MCP initialize)",
+      "method": "same handshake",
+      "sha256": "135b4785611dfa8e67745860bc2ed09aa6f2dedbe003c48a65ad9f09bb4b328b"
+    },
+    "docs.md": {
+      "source": "https://go-foresee.com/docs.md",
+      "method": "HTTP GET",
+      "sha256": "f11259713eba64339b31c006a7abb570d74abffe27c5a17be3269c61803ab74e"
+    },
+    "openapi.json": {
+      "source": "https://go-foresee.com/openapi.json",
+      "method": "HTTP GET",
+      "sha256": "f9f0d78f999127c26dadb307d0d97be217d04b6149279a47196cf8c1531bacff"
+    },
+    "skill-website.md": {
+      "source": "https://go-foresee.com/skills/quote-insurance/SKILL.md",
+      "method": "HTTP GET",
+      "sha256": "9028ce276c0a5918c3a8d27479459c7fbc74573ce29716231e66de7ee19ddf38"
+    },
+    "skill-repo.md": {
+      "source": "https://github.com/Foresee-Tech/foresee/blob/614bce7397d8f3d12b162b449069e17b79442c93/plugins/foresee/skills/quote-insurance/SKILL.md",
+      "method": "git clone, commit 614bce7 (1 Nov 2026)",
+      "sha256": "ce062897389ff330c08a9135c151432252c01978fd5554d62258d7e76c312245"
+    },
+    "agent-skills-index.json": {
+      "source": "https://go-foresee.com/.well-known/agent-skills/index.json",
+      "method": "HTTP GET",
+      "sha256": "210fad80d5ecb1786f3937ba537dc303b04227427350af0afca9bf9270e9f6c9"
+    },
+    "llms-full.txt": {
+      "source": "https://go-foresee.com/llms-full.txt",
+      "method": "HTTP GET",
+      "sha256": "9a30e7c2ce3ef7b00d0954e443c628c57060bd265ac29d74b751dfe11c7ee000"
+    },
+    "server-card.json": {
+      "source": "https://go-foresee.com/.well-known/mcp/server-card.json",
+      "method": "HTTP GET",
+      "sha256": "6efbd33886b39fbc3e11e699de51b2a558a863ab38faff05b13d5f785c721f10"
+    }
+  }
+}

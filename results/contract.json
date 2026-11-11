@@ -1,0 +1,156 @@
+[
+  {
+    "id": "path-auto.drivers[].age_first_licensed",
+    "title": "`auto.drivers[].age_first_licensed` is named in Foresee's guidance but not in the live input schema",
+    "detail": "The live schema says a key it doesn't name is carried but never rated.",
+    "evidence": [
+      {
+        "file": "docs.md",
+        "quote": "auto.drivers[].age_first_licensed"
+      },
+      {
+        "file": "docs.md response examples",
+        "quote": "auto.drivers[].age_first_licensed"
+      }
+    ]
+  },
+  {
+    "id": "path-auto.drivers[].years_licensed",
+    "title": "`auto.drivers[].years_licensed` is named in Foresee's guidance but not in the live input schema",
+    "detail": "The live schema says a key it doesn't name is carried but never rated.",
+    "evidence": [
+      {
+        "file": "docs.md",
+        "quote": "auto.drivers[].years_licensed"
+      }
+    ]
+  },
+  {
+    "id": "path-property.protection_class",
+    "title": "`property.protection_class` is named in Foresee's guidance but not in the live input schema",
+    "detail": "The live schema says a key it doesn't name is carried but never rated.",
+    "evidence": [
+      {
+        "file": "docs.md",
+        "quote": "property.protection_class"
+      },
+      {
+        "file": "docs.md response examples",
+        "quote": "property.protection_class"
+      }
+    ]
+  },
+  {
+    "id": "coverage-sums",
+    "title": "Per-coverage lines differ from the monthly price by a cent",
+    "detail": "Likely per-line rounding; agents that add the L rows will not match the headline price.",
+    "evidence": [
+      {
+        "file": "docs.md response examples",
+        "quote": "auto mercury: C 235.11 vs L sum 235.12"
+      },
+      {
+        "file": "docs.md response examples",
+        "quote": "home mercury: C 123.67 vs L sum 123.68"
+      },
+      {
+        "file": "docs.md response examples",
+        "quote": "renters farmers: C 29.88 vs L sum 29.89"
+      },
+      {
+        "file": "docs.md response examples",
+        "quote": "auto mercury: C 289.94 vs L sum 289.95"
+      },
+      {
+        "file": "docs.md response examples",
+        "quote": "auto farmers: C 398.00 vs L sum 397.99"
+      },
+      {
+        "file": "docs.md response examples",
+        "quote": "renters farmers: C 29.88 vs L sum 29.89"
+      }
+    ]
+  },
+  {
+    "id": "skill-version",
+    "title": "Website and repository skills are both version 0.8.6 but differ",
+    "detail": "35 lines differ; installed copies can't tell which text they have.",
+    "evidence": [
+      {
+        "file": "skill-website.md",
+        "quote": "version: 0.8.6"
+      },
+      {
+        "file": "skill-repo.md",
+        "quote": "version: 0.8.6"
+      }
+    ]
+  },
+  {
+    "id": "skill-index",
+    "title": "The agent-skills index publishes the website skill's digest, not the repository's",
+    "detail": "Agents that verify the digest get the website text, which lacks rules present in the repository copy.",
+    "evidence": [
+      {
+        "file": "agent-skills-index.json",
+        "quote": "9028ce276c0a5918c3a8d27479459c7fbc74573ce29716231e66de7ee19ddf38"
+      }
+    ]
+  },
+  {
+    "id": "default-coverage",
+    "title": "Docs and live tool describe omitted optional coverages differently",
+    "detail": "The docs say only the options passed are priced; the live tool description says an omitted um/medpay keeps each carrier's own default. In the docs' own auto example, Mercury's lines include MEDPAY and Travelers' don't, though the request named neither. A comparison can then mix coverages. The repository skill now sends medpay 5000 in its starting point, which narrows this.",
+    "evidence": [
+      {
+        "file": "docs.md",
+        "quote": "Nothing is priced at a server default: the options you pass are the ones priced."
+      },
+      {
+        "file": "tools-list.json",
+        "quote": "An omitted OPTIONAL axis (`um`, `medpay`, `coverage_d`) keeps each carrier's own default"
+      }
+    ]
+  },
+  {
+    "id": "monthly-vs-term",
+    "title": "Estimates are monthly; confirmations print a term premium",
+    "detail": "quote_insurance returns monthly prices and accepts a term of 6 or 12 months; live confirmations return the carrier page's own term premium. How the monthly figure relates to a term (and to paying in full) isn't stated, so an agent comparing an estimate with a confirmation has to convert on its own.",
+    "evidence": [
+      {
+        "file": "tools-list.json",
+        "quote": "Policy term in months, 6 or 12. Many carriers price six months only; each quote says its term"
+      },
+      {
+        "file": "docs.md",
+        "quote": "covers \u2014 $857.80 **per 6 months**, not per month."
+      }
+    ]
+  },
+  {
+    "id": "live-progress-field",
+    "title": "live_carrier_quotes progress field is named two ways in the docs",
+    "detail": "The response table names `eta_seconds_remaining`; the in-progress example returns `eta_seconds`. A client written from the table would miss the value.",
+    "evidence": [
+      {
+        "file": "docs.md",
+        "quote": "| `stage`, `eta_seconds_remaining` | in progress |"
+      },
+      {
+        "file": "docs.md",
+        "quote": "\"eta_seconds\": 480"
+      }
+    ]
+  },
+  {
+    "id": "empty-content",
+    "title": "Priced results use structuredContent only, leaving the text channel empty",
+    "detail": "MCP 2025-06-18 says a tool returning structured content SHOULD also return the serialized JSON in a text block. Clients that read only text (Foresee runs a separate Cursor host for this) see nothing.",
+    "evidence": [
+      {
+        "file": "docs.md",
+        "quote": "A priced result arrives entirely in `structuredContent`; `content` is empty."
+      }
+    ]
+  }
+]

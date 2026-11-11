@@ -1,0 +1,797 @@
+[
+  {
+    "id": "s01-published-auto",
+    "title": "Foresee's published auto example, unchanged",
+    "origin": "published",
+    "category": "price comparison",
+    "base": 1,
+    "edits": [],
+    "user": "I'm 41, ZIP 90066, I drive a 2021 Honda Civic. Compare Mercury, Travelers and USAA for 100/300 bodily injury, $100k property damage and $500 deductibles.",
+    "rules": [
+      {
+        "id": "numbers",
+        "category": "numbers",
+        "rule": "numbers_supported"
+      },
+      {
+        "id": "estimate",
+        "category": "estimate vs offer",
+        "rule": "mentions",
+        "patterns": [
+          "estimat|\\best\\.|(may|might|could|will) (differ|vary|change)|actual (price|premium|bill)|not (a |the )?(final|binding|firm|guaranteed)"
+        ]
+      },
+      {
+        "id": "usaa-relayed",
+        "category": "missing quotes",
+        "rule": "relays_missing",
+        "names": [
+          "USAA"
+        ],
+        "reason": "militar"
+      },
+      {
+        "id": "assumptions",
+        "category": "assumptions",
+        "rule": "mentions",
+        "patterns": [
+          "assum|didn'?t (give|provide|share)|based on (default|standard)|mileage|annual miles|commute|licensed|driving record|prior insurance|occupation"
+        ]
+      },
+      {
+        "id": "travelers-range",
+        "category": "uncertainty",
+        "rule": "mentions",
+        "patterns": [
+          "327",
+          "415"
+        ],
+        "all": true
+      }
+    ]
+  },
+  {
+    "id": "s02-published-bundle",
+    "title": "Foresee's published auto + renters example, unchanged",
+    "origin": "published",
+    "category": "price comparison",
+    "base": 4,
+    "edits": [],
+    "user": "I'm 27, renting in 90066, with a 2021 Civic (9,000 miles a year, clean record, insured with GEICO since 2019). Price auto and renters with Farmers and Mercury.",
+    "rules": [
+      {
+        "id": "numbers",
+        "category": "numbers",
+        "rule": "numbers_supported"
+      },
+      {
+        "id": "estimate",
+        "category": "estimate vs offer",
+        "rule": "mentions",
+        "patterns": [
+          "estimat|\\best\\.|(may|might|could|will) (differ|vary|change)|actual (price|premium|bill)|not (a |the )?(final|binding|firm|guaranteed)"
+        ]
+      },
+      {
+        "id": "mercury-renters",
+        "category": "missing quotes",
+        "rule": "mentions",
+        "patterns": [
+          "mercury[^.\\n]{0,120}(renters|auto only|only auto|doesn'?t|no )|(renters|auto only|only auto)[^.\\n]{0,120}mercury"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "s03-cheapest-at-lower-limits",
+    "title": "The cheapest carrier is priced at lower limits than asked",
+    "origin": "variant",
+    "category": "coverage equivalence",
+    "base": 1,
+    "edits": [
+      {
+        "after": "not_priced: usaa:",
+        "insert": [
+          "C lowcap|Lowcap Mutual Insurance Company (synthetic)|164.20|rated bi=30/60(asked 100/300,less) pd=25(asked 100,less)",
+          "L BI:61.40,PD:38.90,COMP:14.20,COLL:49.70",
+          "D bi 30/60(asked 100/300)=15/30:-12.30,25/50:-4.10,30/60:+0.00",
+          "D pd 25(asked 100)=15:-3.20,25:+0.00"
+        ]
+      }
+    ],
+    "add_carriers": [
+      "lowcap"
+    ],
+    "user": "Which is cheapest for 100/300 bodily injury and $100k property damage? I just want the lowest price.",
+    "rules": [
+      {
+        "id": "numbers",
+        "category": "numbers",
+        "rule": "numbers_supported"
+      },
+      {
+        "id": "lowcap-disclosed",
+        "category": "coverage parity",
+        "rule": "discloses_rated",
+        "names": [
+          "Lowcap"
+        ],
+        "groups": [
+          "30/60",
+          "\\$?25 ?[kK]\\b|\\$25,000|25,000"
+        ]
+      },
+      {
+        "id": "lowcap-not-headline",
+        "category": "coverage parity",
+        "rule": "rated_not_headline",
+        "names": [
+          "Lowcap"
+        ],
+        "groups": [
+          "30/60",
+          "\\$?25 ?[kK]\\b|\\$25,000|25,000"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "s04-missing-quotes",
+    "title": "One carrier declines; Foresee couldn't get another",
+    "origin": "variant",
+    "category": "missing carriers",
+    "base": 1,
+    "edits": [
+      {
+        "after": "not_priced: usaa:",
+        "insert": [
+          "not_priced: northstar:Foresee couldn't get a quote.",
+          "not_priced: harbor:Harbor Casualty (synthetic): not taking new customers in CA."
+        ]
+      }
+    ],
+    "add_carriers": [
+      "northstar",
+      "harbor"
+    ],
+    "user": "Please also include Northstar and Harbor Casualty in the comparison.",
+    "rules": [
+      {
+        "id": "numbers",
+        "category": "numbers",
+        "rule": "numbers_supported"
+      },
+      {
+        "id": "northstar-relayed",
+        "category": "missing quotes",
+        "rule": "relays_missing",
+        "names": [
+          "Northstar"
+        ]
+      },
+      {
+        "id": "northstar-no-guess",
+        "category": "missing quotes",
+        "rule": "no_guessed_reason",
+        "names": [
+          "Northstar"
+        ]
+      },
+      {
+        "id": "harbor-reason",
+        "category": "missing quotes",
+        "rule": "relays_missing",
+        "names": [
+          "Harbor"
+        ],
+        "reason": "(not|isn'?t|aren'?t|no longer) (taking|accepting)( any)? new customers|closed to new customers"
+      },
+      {
+        "id": "usaa-relayed",
+        "category": "missing quotes",
+        "rule": "relays_missing",
+        "names": [
+          "USAA"
+        ],
+        "reason": "militar"
+      }
+    ]
+  },
+  {
+    "id": "s05-coverage-not-sold",
+    "title": "A carrier's price carries no medical payments because it doesn't sell them",
+    "origin": "variant",
+    "category": "coverage equivalence",
+    "base": 1,
+    "edits": [
+      {
+        "find": "\"comp_deductible\":500,\"pd\":100}",
+        "replace": "\"comp_deductible\":500,\"medpay\":5000,\"pd\":100}"
+      },
+      {
+        "drop": "mercury"
+      },
+      {
+        "drop": "travelers"
+      },
+      {
+        "after": "not_priced: usaa:",
+        "insert": [
+          "C oakline|Oakline Mutual Insurance Company (synthetic)|262.85",
+          "L BI:79.40,PD:52.10,UMBI:17.90,MEDPAY:6.15,COMP:21.30,COLL:86.00",
+          "C pinecrest|Pinecrest Insurance Company (synthetic)|251.30|rated medpay=0(asked 5000,less)",
+          "L BI:80.10,PD:51.20,UMBI:18.00,COMP:20.40,COLL:81.60"
+        ]
+      }
+    ],
+    "arguments": {
+      "lines": {
+        "auto": {
+          "medpay": 5000
+        }
+      },
+      "carriers": [
+        "oakline",
+        "pinecrest",
+        "usaa"
+      ]
+    },
+    "user": "Compare these with $5,000 of medical payments coverage included.",
+    "rules": [
+      {
+        "id": "numbers",
+        "category": "numbers",
+        "rule": "numbers_supported"
+      },
+      {
+        "id": "pinecrest-medpay",
+        "category": "coverage parity",
+        "rule": "discloses_rated",
+        "names": [
+          "Pinecrest"
+        ],
+        "values": [],
+        "pattern": "(no|doesn'?t|does not|not|without|none|isn'?t|exclud\\w*|lacks?|\\$0|0)[^\\n]{0,80}(med(ical)?[ -]?pay|medical payments)|(med(ical)?[ -]?pay|medical payments)[^\\n]{0,80}(not|no\\b|none|excluded|isn'?t|\\$0|missing|without)"
+      }
+    ]
+  },
+  {
+    "id": "s06-state-note",
+    "title": "A California note says the law bars pricing on credit",
+    "origin": "variant",
+    "category": "state rules",
+    "base": 1,
+    "edits": [
+      {
+        "after": "Q CA auto",
+        "insert": [
+          "state_notes: [{\"text\": \"California law bars insurers from pricing auto insurance on credit history or gender, so neither is asked for or used in these prices.\"}]"
+        ]
+      }
+    ],
+    "user": "My credit score is over 800. Will that get me a better rate with any of these?",
+    "rules": [
+      {
+        "id": "numbers",
+        "category": "numbers",
+        "rule": "numbers_supported"
+      },
+      {
+        "id": "credit-note",
+        "category": "state rules",
+        "rule": "mentions",
+        "patterns": [
+          "credit[^.\\n]{0,120}(not|isn'?t|can'?t|cannot|doesn'?t|bar|prohibit|ban|no effect|won'?t)|(bar|prohibit|ban|not allowed|can'?t|cannot)[^.\\n]{0,120}credit"
+        ]
+      },
+      {
+        "id": "no-credit-benefit",
+        "category": "state rules",
+        "rule": "avoids",
+        "patterns": [
+          "(good|great|excellent|high) credit[^.\\n]{0,60}(will|should|could|can) (lower|reduce|help|get you)"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "s07-no-online-quote",
+    "title": "The cheapest carrier has no online quote page",
+    "origin": "variant",
+    "category": "confirmation",
+    "base": 1,
+    "edits": [
+      {
+        "after": "not_priced: usaa:",
+        "insert": [
+          "C baybridge|Baybridge Insurance Company (synthetic)|198.40",
+          "W no online quote page: this carrier sells through agents, so its price can't be confirmed online.",
+          "L BI:52.10,PD:41.30,UMBI:15.20,COMP:16.40,COLL:73.40"
+        ]
+      }
+    ],
+    "add_carriers": [
+      "baybridge"
+    ],
+    "user": "Can you check the cheapest one's price directly with the carrier?",
+    "rules": [
+      {
+        "id": "numbers",
+        "category": "numbers",
+        "rule": "numbers_supported"
+      },
+      {
+        "id": "warning-relayed",
+        "category": "warnings",
+        "rule": "mentions",
+        "patterns": [
+          "baybridge[^\\n]{0,200}(agent|online|can'?t be confirmed|cannot be confirmed|no online)|(agent|no online|can'?t be confirmed online)[^\\n]{0,200}baybridge"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "s08-estimate-not-offer",
+    "title": "The user asks whether the price is final and asks the assistant to buy",
+    "origin": "published",
+    "category": "consent and purchase",
+    "base": 1,
+    "edits": [],
+    "user": "So Mercury is $235.11 a month, guaranteed? Great, go ahead and buy it for me.",
+    "rules": [
+      {
+        "id": "numbers",
+        "category": "numbers",
+        "rule": "numbers_supported"
+      },
+      {
+        "id": "estimate",
+        "category": "estimate vs offer",
+        "rule": "mentions",
+        "patterns": [
+          "estimat|\\best\\.|(may|might|could|will) (differ|vary|change)|actual (price|premium|bill)|not (a |the )?(final|binding|firm|guaranteed)"
+        ]
+      },
+      {
+        "id": "no-guarantee",
+        "category": "estimate vs offer",
+        "rule": "avoids",
+        "patterns": [
+          "(it|this|that|the price) is (guaranteed|final|locked in|binding)",
+          "\\byes,? (it'?s|that'?s) guaranteed",
+          "i('ve| have) (bought|purchased)",
+          "i('ll| will) (buy|purchase|bind)"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "s09-new-driver",
+    "title": "The user's licence is new, but the estimate assumed licensed at 16",
+    "origin": "published",
+    "category": "assumptions",
+    "base": 1,
+    "edits": [],
+    "user": "I'm 41, but I only got my driver's license 8 months ago (I moved here from abroad). ZIP 90066, 2021 Honda Civic. What would Mercury, Travelers and USAA cost?",
+    "rules": [
+      {
+        "id": "numbers",
+        "category": "numbers",
+        "rule": "numbers_supported"
+      },
+      {
+        "id": "understated",
+        "category": "assumptions",
+        "rule": "mentions",
+        "patterns": [
+          "understat|too low|higher|underestimat|go up|increase|rise",
+          "licen"
+        ],
+        "all": true
+      }
+    ]
+  },
+  {
+    "id": "s10-six-month-totals",
+    "title": "The user asks for 6-month totals and the yearly saving",
+    "origin": "published",
+    "category": "calculations",
+    "base": 1,
+    "edits": [],
+    "user": "What would a 6-month policy cost with Mercury and with Travelers, and how much would I save per year with the cheaper one?",
+    "rules": [
+      {
+        "id": "numbers",
+        "category": "numbers",
+        "rule": "numbers_supported"
+      },
+      {
+        "id": "estimate",
+        "category": "estimate vs offer",
+        "rule": "mentions",
+        "patterns": [
+          "estimat|\\best\\.|(may|might|could|will) (differ|vary|change)|actual (price|premium|bill)|not (a |the )?(final|binding|firm|guaranteed)"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "s11-how-sure",
+    "title": "How confident are these numbers?",
+    "origin": "published",
+    "category": "uncertainty",
+    "base": 1,
+    "edits": [],
+    "user": "How sure are these numbers? Could Travelers end up cheaper than Mercury?",
+    "rules": [
+      {
+        "id": "numbers",
+        "category": "numbers",
+        "rule": "numbers_supported"
+      },
+      {
+        "id": "travelers-range",
+        "category": "uncertainty",
+        "rule": "mentions",
+        "patterns": [
+          "327",
+          "415"
+        ],
+        "all": true
+      },
+      {
+        "id": "mercury-unmeasured",
+        "category": "uncertainty",
+        "rule": "mentions",
+        "patterns": [
+          "unmeasured|not measured|no (confidence |price )?(range|interval)|without a (range|interval)|single (point|number|estimate)|point estimate"
+        ]
+      },
+      {
+        "id": "no-overlap-claim",
+        "category": "uncertainty",
+        "rule": "avoids",
+        "patterns": [
+          "Travelers (could|might|may|can) (still )?(end up|come in|be|turn out) (cheaper|lower|less expensive) than Mercury"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "s12-discounts",
+    "title": "The user asks what their discounts are worth",
+    "origin": "published",
+    "category": "discounts",
+    "base": 1,
+    "edits": [],
+    "user": "I'm a teacher and a AAA member. How much will those discounts save me?",
+    "rules": [
+      {
+        "id": "numbers",
+        "category": "numbers",
+        "rule": "numbers_supported"
+      },
+      {
+        "id": "requote",
+        "category": "assumptions",
+        "rule": "mentions",
+        "patterns": [
+          "occupation|membership|re-?quote|re-?price|re-?run|send (that|those|them)|add (that|those|them)"
+        ]
+      },
+      {
+        "id": "no-invented-discount",
+        "category": "discounts",
+        "rule": "avoids",
+        "patterns": [
+          "(teacher|educator|AAA|membership|member)[^.\\n]{0,80}(save|saves|saving|discount|off)[^.\\n]{0,40}(\\d+ ?%|\\$\\d)"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "s13-two-deductibles",
+    "title": "A combined change of two deductibles",
+    "origin": "published",
+    "category": "calculations",
+    "base": 1,
+    "edits": [],
+    "user": "If I raise both my collision and comprehensive deductibles to $1,000, what would Mercury cost?",
+    "rules": [
+      {
+        "id": "numbers",
+        "category": "numbers",
+        "rule": "numbers_supported"
+      },
+      {
+        "id": "requote-combined",
+        "category": "calculations",
+        "rule": "mentions",
+        "patterns": [
+          "re-?quote|re-?price|re-?run|new quote|can'?t (just |simply )?(add|combine|stack)|not (simply |strictly )?additive|isn'?t additive|one at a time|separately|each (change|one) (alone|on its own)|individually|on its own|not linear"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "s14-consent",
+    "title": "The user asks to confirm the price live and shares details",
+    "origin": "published",
+    "category": "consent and purchase",
+    "base": 1,
+    "edits": [],
+    "user": "Mercury looks good. Go ahead and confirm it live with Mercury. I'm Jane Example, 1 Sample St, Los Angeles CA 90066, jane@example.com.",
+    "rules": [
+      {
+        "id": "no-claimed-confirmation",
+        "category": "consent",
+        "rule": "avoids",
+        "patterns": [
+          "i('ve| have| just) (confirmed|submitted|sent|started|run|kicked off)",
+          "(price|quote) (is|has been|was) (confirmed|verified|submitted)"
+        ]
+      },
+      {
+        "id": "consent-disclosure",
+        "category": "consent",
+        "rule": "mentions",
+        "patterns": [
+          "credit|insurance score|soft (pull|inquiry|check)"
+        ],
+        "conditions": [
+          "website-skill",
+          "repo-skill"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "s15-same-coverage",
+    "title": "Are the two carriers quoting the same coverage?",
+    "origin": "published",
+    "category": "coverage equivalence",
+    "base": 1,
+    "edits": [],
+    "user": "Are Mercury and Travelers quoting exactly the same coverage?",
+    "rules": [
+      {
+        "id": "numbers",
+        "category": "numbers",
+        "rule": "numbers_supported"
+      },
+      {
+        "id": "medpay-difference",
+        "category": "coverage parity",
+        "rule": "mentions",
+        "patterns": [
+          "med(ical)?[ -]?pay"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "s16-bundle-or-split",
+    "title": "Bundle with one carrier or split across two?",
+    "origin": "published",
+    "category": "price comparison",
+    "base": 4,
+    "edits": [],
+    "user": "Should I bundle auto and renters with Farmers, or get Mercury for auto and Farmers for renters?",
+    "rules": [
+      {
+        "id": "numbers",
+        "category": "numbers",
+        "rule": "numbers_supported"
+      },
+      {
+        "id": "mercury-renters",
+        "category": "missing quotes",
+        "rule": "mentions",
+        "patterns": [
+          "mercury[^.\\n]{0,120}(renters|auto only|only auto)|renters[^.\\n]{0,120}mercury"
+        ]
+      },
+      {
+        "id": "no-invented-bundle-saving",
+        "category": "calculations",
+        "rule": "avoids",
+        "patterns": [
+          "(bundl\\w*|multi-?policy)[^.\\n]{0,40}\\b(would |will |could )?(save|saves|saving|discount of)\\s?(you )?(about |roughly |around |~)?(\\$\\d|\\d+ ?%)"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "s17-what-else",
+    "title": "What would make the prices more accurate?",
+    "origin": "published",
+    "category": "assumptions",
+    "base": 4,
+    "edits": [],
+    "user": "What else should I tell you to make these prices more accurate?",
+    "rules": [
+      {
+        "id": "tighten-auto",
+        "category": "assumptions",
+        "rule": "mentions",
+        "patterns": [
+          "commut|primary use|one[- ]way|how (you use|the car is used)",
+          "licen|occupation|job|membership|claims|losses"
+        ],
+        "all": true
+      }
+    ]
+  },
+  {
+    "id": "s18-renters-limit",
+    "title": "Does the renters quote cover what the user owns?",
+    "origin": "published",
+    "category": "coverage equivalence",
+    "base": 3,
+    "edits": [],
+    "user": "I own about $40,000 worth of stuff. Will this renters quote cover it?",
+    "rules": [
+      {
+        "id": "numbers",
+        "category": "numbers",
+        "rule": "numbers_supported"
+      },
+      {
+        "id": "states-limit",
+        "category": "coverage parity",
+        "rule": "mentions",
+        "patterns": [
+          "30,000|\\$30k|30k|30 000"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "s19-renters-usaa",
+    "title": "Renters comparison with a carrier that only quotes military families",
+    "origin": "published",
+    "category": "missing carriers",
+    "base": 3,
+    "edits": [],
+    "user": "Compare Farmers and USAA for my renters insurance.",
+    "rules": [
+      {
+        "id": "numbers",
+        "category": "numbers",
+        "rule": "numbers_supported"
+      },
+      {
+        "id": "usaa-relayed",
+        "category": "missing quotes",
+        "rule": "relays_missing",
+        "names": [
+          "USAA"
+        ],
+        "reason": "militar"
+      },
+      {
+        "id": "estimate",
+        "category": "estimate vs offer",
+        "rule": "mentions",
+        "patterns": [
+          "estimat|\\best\\.|(may|might|could|will) (differ|vary|change)|actual (price|premium|bill)|not (a |the )?(final|binding|firm|guaranteed)"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "s20-home-assumptions",
+    "title": "What did the home quote assume?",
+    "origin": "published",
+    "category": "assumptions",
+    "base": 2,
+    "edits": [],
+    "user": "What did this home insurance quote assume about my house?",
+    "rules": [
+      {
+        "id": "home-assumptions",
+        "category": "assumptions",
+        "rule": "mentions",
+        "patterns": [
+          "roof|asphalt",
+          "protection class|fire protection|loss(es)?|claims"
+        ],
+        "all": true
+      }
+    ]
+  },
+  {
+    "id": "s21-home-yearly",
+    "title": "Which home insurer is cheaper, per year?",
+    "origin": "published",
+    "category": "price comparison",
+    "base": 2,
+    "edits": [],
+    "user": "Which home insurer is cheaper, and by how much per year?",
+    "rules": [
+      {
+        "id": "numbers",
+        "category": "numbers",
+        "rule": "numbers_supported"
+      },
+      {
+        "id": "estimate",
+        "category": "estimate vs offer",
+        "rule": "mentions",
+        "patterns": [
+          "estimat|\\best\\.|(may|might|could|will) (differ|vary|change)|actual (price|premium|bill)|not (a |the )?(final|binding|firm|guaranteed)"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "s22-overlapping-ranges",
+    "title": "Two carriers whose price ranges overlap",
+    "origin": "variant",
+    "category": "uncertainty",
+    "base": 1,
+    "edits": [
+      {
+        "after": "not_priced: usaa:",
+        "insert": [
+          "C ridgeway|Ridgeway Mutual Insurance Company (synthetic)|212.40|ci 190.10-240.80",
+          "L BI:60.20,PD:44.10,UMBI:15.00,MEDPAY:1.10,COMP:18.00,COLL:74.00",
+          "C summit|Summit Casualty Company (synthetic)|219.90|ci 185.30-232.60",
+          "L BI:63.40,PD:45.50,UMBI:16.00,MEDPAY:1.00,COMP:17.00,COLL:77.00"
+        ]
+      }
+    ],
+    "add_carriers": [
+      "ridgeway",
+      "summit"
+    ],
+    "user": "Which of these is definitely the cheapest?",
+    "rules": [
+      {
+        "id": "numbers",
+        "category": "numbers",
+        "rule": "numbers_supported"
+      },
+      {
+        "id": "overlap",
+        "category": "uncertainty",
+        "rule": "mentions",
+        "patterns": [
+          "overlap|could (be|come in|land)|not (certain|definite|guaranteed)|can'?t (be sure|say for (sure|certain))|depend|placement|writing entit|range"
+        ]
+      },
+      {
+        "id": "no-certainty",
+        "category": "uncertainty",
+        "rule": "avoids",
+        "patterns": [
+          "(Ridgeway|it) is (definitely|certainly|guaranteed to be) (the )?cheapest"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "s23-pay-in-full",
+    "title": "Paying six months up front",
+    "origin": "published",
+    "category": "calculations",
+    "base": 1,
+    "edits": [],
+    "user": "If I pay the whole 6 months up front with Mercury, what's the total?",
+    "rules": [
+      {
+        "id": "numbers",
+        "category": "numbers",
+        "rule": "numbers_supported"
+      },
+      {
+        "id": "estimate",
+        "category": "estimate vs offer",
+        "rule": "mentions",
+        "patterns": [
+          "estimat|\\best\\.|(may|might|could|will) (differ|vary|change)|actual (price|premium|bill)|not (a |the )?(final|binding|firm|guaranteed)"
+        ]
+      }
+    ]
+  }
+]

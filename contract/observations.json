@@ -1,0 +1,58 @@
+[
+  {
+    "id": "default-coverage",
+    "title": "Docs and live tool describe omitted optional coverages differently",
+    "detail": "The docs say only the options passed are priced; the live tool description says an omitted um/medpay keeps each carrier's own default. In the docs' own auto example, Mercury's lines include MEDPAY and Travelers' don't, though the request named neither. A comparison can then mix coverages. The repository skill now sends medpay 5000 in its starting point, which narrows this.",
+    "quotes": [
+      {
+        "file": "docs.md",
+        "quote": "Nothing is priced at a server default: the options you pass are the ones priced."
+      },
+      {
+        "file": "tools-list.json",
+        "quote": "An omitted OPTIONAL axis (`um`, `medpay`, `coverage_d`) keeps each carrier's own default"
+      }
+    ]
+  },
+  {
+    "id": "monthly-vs-term",
+    "title": "Estimates are monthly; confirmations print a term premium",
+    "detail": "quote_insurance returns monthly prices and accepts a term of 6 or 12 months; live confirmations return the carrier page's own term premium. How the monthly figure relates to a term (and to paying in full) isn't stated, so an agent comparing an estimate with a confirmation has to convert on its own.",
+    "quotes": [
+      {
+        "file": "tools-list.json",
+        "quote": "Policy term in months, 6 or 12. Many carriers price six months only; each quote says its term"
+      },
+      {
+        "file": "docs.md",
+        "quote": "covers — $857.80 **per 6 months**, not per month."
+      }
+    ]
+  },
+  {
+    "id": "live-progress-field",
+    "title": "live_carrier_quotes progress field is named two ways in the docs",
+    "detail": "The response table names `eta_seconds_remaining`; the in-progress example returns `eta_seconds`. A client written from the table would miss the value.",
+    "quotes": [
+      {
+        "file": "docs.md",
+        "quote": "| `stage`, `eta_seconds_remaining` | in progress |"
+      },
+      {
+        "file": "docs.md",
+        "quote": "\"eta_seconds\": 480"
+      }
+    ]
+  },
+  {
+    "id": "empty-content",
+    "title": "Priced results use structuredContent only, leaving the text channel empty",
+    "detail": "MCP 2025-06-18 says a tool returning structured content SHOULD also return the serialized JSON in a text block. Clients that read only text (Foresee runs a separate Cursor host for this) see nothing.",
+    "quotes": [
+      {
+        "file": "docs.md",
+        "quote": "A priced result arrives entirely in `structuredContent`; `content` is empty."
+      }
+    ]
+  }
+]

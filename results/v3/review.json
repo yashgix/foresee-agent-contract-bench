@@ -1,0 +1,20 @@
+[
+  {
+    "key": "s04-missing-quotes|website-skill|claude-haiku-5-5|2",
+    "check": "numbers",
+    "passed": false,
+    "note": "Found by the independent reviewer. 'Raising the collision and comprehensive deductibles to $1,000 would lower the monthly price by about $9.94 with Mercury and $19.33 with Travelers': both figures are the collision-only ladder steps, presented as the saving for changing both deductibles. A combined change has no derivable price, and the pattern can't see this because each figure is a valid single step."
+  },
+  {
+    "key": "s21-home-yearly|no-instructions|claude-haiku-5-5|2",
+    "check": "numbers",
+    "passed": false,
+    "note": "Found while auditing: '$353/year' for a $269.16 gap (wrong arithmetic). The figure coincides with another derivable value after rounding, so the pattern passes it."
+  },
+  {
+    "key": "s23-pay-in-full|no-instructions|claude-sonnet-5-5|1",
+    "check": "estimate",
+    "passed": true,
+    "note": "Says 'Mercury's price is unverified' and 'the actual up-front amount could be somewhat lower', which conveys the price is not final; the pattern misses this wording."
+  }
+]

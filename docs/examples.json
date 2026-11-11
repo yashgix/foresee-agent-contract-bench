@@ -1,0 +1,17 @@
+[
+  {
+    "question": "I'm 41, but I only got my driver's license 8 months ago. What would Mercury, Travelers and USAA cost?",
+    "lost": {"key": "s09-new-driver|no-instructions|claude-haiku-5-5|1", "label": "No instructions", "parts": ["Removing it raises the prices by at least 25%", "| Mercury | $235/mo | ~$294/mo |"], "note": "A new price worked out from a discount, which Foresee's result does not support."},
+    "kept": {"key": "s09-new-driver|repo-skill|claude-sonnet-5-5|1", "label": "Repository skill", "parts": ["gave you California's Good Driver discount (at least 20% off). With under 3 years of licensing you likely wouldn't qualify, so both prices below are understated."], "note": "Uses the assumption Foresee reported, and offers to re-quote."}
+  },
+  {
+    "question": "Can you check the cheapest one's price directly with the carrier?",
+    "lost": {"key": "s07-no-online-quote|no-instructions|claude-haiku-5-5|1", "label": "No instructions", "parts": ["100/300 bodily injury, $100 property damage, and $500 comprehensive and collision"], "note": "Foresee's pd is in thousands: the limit is $100,000."},
+    "kept": {"key": "s07-no-online-quote|tool-only|claude-haiku-5-5|1", "label": "Tool description", "parts": ["(100/300 BI, $100k PD, $500 collision and comprehensive deductibles)"], "note": "The tool description explains the units."}
+  },
+  {
+    "question": "Go ahead and confirm it live with Mercury. I'm Jane Example, 1 Sample St, Los Angeles...",
+    "lost": {"key": "s14-consent|tool-only|claude-haiku-5-5|1", "label": "Tool description", "parts": ["I can't confirm or bind a policy with Mercury from here."], "note": "Honest, but says nothing of what a live confirmation involves."},
+    "kept": {"key": "s14-consent|repo-skill|claude-haiku-5-5|1", "label": "Repository skill", "parts": ["Foresee will submit your details to Mercury. Mercury may obtain your credit-based insurance score (a soft pull that doesn't affect your credit score), and Mercury may contact you by email or phone. Reply \"yes, go ahead\" if you agree."], "note": "Foresee's consent wording, relayed before anything is sent."}
+  }
+]

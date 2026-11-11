@@ -1,0 +1,3101 @@
+{
+  "replies_by": {
+    "condition": [
+      {
+        "condition": "no-instructions",
+        "passed": 47,
+        "total": 69,
+        "rate": 0.681
+      },
+      {
+        "condition": "repo-skill",
+        "passed": 62,
+        "total": 69,
+        "rate": 0.899
+      },
+      {
+        "condition": "tool-only",
+        "passed": 53,
+        "total": 69,
+        "rate": 0.768
+      },
+      {
+        "condition": "website-skill",
+        "passed": 65,
+        "total": 69,
+        "rate": 0.942
+      }
+    ],
+    "model": [
+      {
+        "model": "claude-haiku-5-5",
+        "condition": "no-instructions",
+        "passed": 30,
+        "total": 46,
+        "rate": 0.652
+      },
+      {
+        "model": "claude-haiku-5-5",
+        "condition": "repo-skill",
+        "passed": 43,
+        "total": 46,
+        "rate": 0.935
+      },
+      {
+        "model": "claude-haiku-5-5",
+        "condition": "tool-only",
+        "passed": 35,
+        "total": 46,
+        "rate": 0.761
+      },
+      {
+        "model": "claude-haiku-5-5",
+        "condition": "website-skill",
+        "passed": 43,
+        "total": 46,
+        "rate": 0.935
+      },
+      {
+        "model": "claude-sonnet-5-5",
+        "condition": "no-instructions",
+        "passed": 17,
+        "total": 23,
+        "rate": 0.739
+      },
+      {
+        "model": "claude-sonnet-5-5",
+        "condition": "repo-skill",
+        "passed": 19,
+        "total": 23,
+        "rate": 0.826
+      },
+      {
+        "model": "claude-sonnet-5-5",
+        "condition": "tool-only",
+        "passed": 18,
+        "total": 23,
+        "rate": 0.783
+      },
+      {
+        "model": "claude-sonnet-5-5",
+        "condition": "website-skill",
+        "passed": 22,
+        "total": 23,
+        "rate": 0.957
+      }
+    ],
+    "scenario_category": [
+      {
+        "scenario_category": "assumptions",
+        "condition": "no-instructions",
+        "passed": 6,
+        "total": 9,
+        "rate": 0.667
+      },
+      {
+        "scenario_category": "assumptions",
+        "condition": "repo-skill",
+        "passed": 9,
+        "total": 9,
+        "rate": 1.0
+      },
+      {
+        "scenario_category": "assumptions",
+        "condition": "tool-only",
+        "passed": 8,
+        "total": 9,
+        "rate": 0.889
+      },
+      {
+        "scenario_category": "assumptions",
+        "condition": "website-skill",
+        "passed": 9,
+        "total": 9,
+        "rate": 1.0
+      },
+      {
+        "scenario_category": "calculations",
+        "condition": "no-instructions",
+        "passed": 5,
+        "total": 9,
+        "rate": 0.556
+      },
+      {
+        "scenario_category": "calculations",
+        "condition": "repo-skill",
+        "passed": 7,
+        "total": 9,
+        "rate": 0.778
+      },
+      {
+        "scenario_category": "calculations",
+        "condition": "tool-only",
+        "passed": 4,
+        "total": 9,
+        "rate": 0.444
+      },
+      {
+        "scenario_category": "calculations",
+        "condition": "website-skill",
+        "passed": 8,
+        "total": 9,
+        "rate": 0.889
+      },
+      {
+        "scenario_category": "confirmation",
+        "condition": "no-instructions",
+        "passed": 1,
+        "total": 3,
+        "rate": 0.333
+      },
+      {
+        "scenario_category": "confirmation",
+        "condition": "repo-skill",
+        "passed": 3,
+        "total": 3,
+        "rate": 1.0
+      },
+      {
+        "scenario_category": "confirmation",
+        "condition": "tool-only",
+        "passed": 3,
+        "total": 3,
+        "rate": 1.0
+      },
+      {
+        "scenario_category": "confirmation",
+        "condition": "website-skill",
+        "passed": 3,
+        "total": 3,
+        "rate": 1.0
+      },
+      {
+        "scenario_category": "consent and purchase",
+        "condition": "no-instructions",
+        "passed": 4,
+        "total": 6,
+        "rate": 0.667
+      },
+      {
+        "scenario_category": "consent and purchase",
+        "condition": "repo-skill",
+        "passed": 6,
+        "total": 6,
+        "rate": 1.0
+      },
+      {
+        "scenario_category": "consent and purchase",
+        "condition": "tool-only",
+        "passed": 6,
+        "total": 6,
+        "rate": 1.0
+      },
+      {
+        "scenario_category": "consent and purchase",
+        "condition": "website-skill",
+        "passed": 6,
+        "total": 6,
+        "rate": 1.0
+      },
+      {
+        "scenario_category": "coverage equivalence",
+        "condition": "no-instructions",
+        "passed": 12,
+        "total": 12,
+        "rate": 1.0
+      },
+      {
+        "scenario_category": "coverage equivalence",
+        "condition": "repo-skill",
+        "passed": 12,
+        "total": 12,
+        "rate": 1.0
+      },
+      {
+        "scenario_category": "coverage equivalence",
+        "condition": "tool-only",
+        "passed": 11,
+        "total": 12,
+        "rate": 0.917
+      },
+      {
+        "scenario_category": "coverage equivalence",
+        "condition": "website-skill",
+        "passed": 11,
+        "total": 12,
+        "rate": 0.917
+      },
+      {
+        "scenario_category": "discounts",
+        "condition": "no-instructions",
+        "passed": 1,
+        "total": 3,
+        "rate": 0.333
+      },
+      {
+        "scenario_category": "discounts",
+        "condition": "repo-skill",
+        "passed": 3,
+        "total": 3,
+        "rate": 1.0
+      },
+      {
+        "scenario_category": "discounts",
+        "condition": "tool-only",
+        "passed": 3,
+        "total": 3,
+        "rate": 1.0
+      },
+      {
+        "scenario_category": "discounts",
+        "condition": "website-skill",
+        "passed": 3,
+        "total": 3,
+        "rate": 1.0
+      },
+      {
+        "scenario_category": "missing carriers",
+        "condition": "no-instructions",
+        "passed": 3,
+        "total": 6,
+        "rate": 0.5
+      },
+      {
+        "scenario_category": "missing carriers",
+        "condition": "repo-skill",
+        "passed": 5,
+        "total": 6,
+        "rate": 0.833
+      },
+      {
+        "scenario_category": "missing carriers",
+        "condition": "tool-only",
+        "passed": 2,
+        "total": 6,
+        "rate": 0.333
+      },
+      {
+        "scenario_category": "missing carriers",
+        "condition": "website-skill",
+        "passed": 4,
+        "total": 6,
+        "rate": 0.667
+      },
+      {
+        "scenario_category": "price comparison",
+        "condition": "no-instructions",
+        "passed": 9,
+        "total": 12,
+        "rate": 0.75
+      },
+      {
+        "scenario_category": "price comparison",
+        "condition": "repo-skill",
+        "passed": 9,
+        "total": 12,
+        "rate": 0.75
+      },
+      {
+        "scenario_category": "price comparison",
+        "condition": "tool-only",
+        "passed": 8,
+        "total": 12,
+        "rate": 0.667
+      },
+      {
+        "scenario_category": "price comparison",
+        "condition": "website-skill",
+        "passed": 12,
+        "total": 12,
+        "rate": 1.0
+      },
+      {
+        "scenario_category": "state rules",
+        "condition": "no-instructions",
+        "passed": 1,
+        "total": 3,
+        "rate": 0.333
+      },
+      {
+        "scenario_category": "state rules",
+        "condition": "repo-skill",
+        "passed": 3,
+        "total": 3,
+        "rate": 1.0
+      },
+      {
+        "scenario_category": "state rules",
+        "condition": "tool-only",
+        "passed": 3,
+        "total": 3,
+        "rate": 1.0
+      },
+      {
+        "scenario_category": "state rules",
+        "condition": "website-skill",
+        "passed": 3,
+        "total": 3,
+        "rate": 1.0
+      },
+      {
+        "scenario_category": "uncertainty",
+        "condition": "no-instructions",
+        "passed": 5,
+        "total": 6,
+        "rate": 0.833
+      },
+      {
+        "scenario_category": "uncertainty",
+        "condition": "repo-skill",
+        "passed": 5,
+        "total": 6,
+        "rate": 0.833
+      },
+      {
+        "scenario_category": "uncertainty",
+        "condition": "tool-only",
+        "passed": 5,
+        "total": 6,
+        "rate": 0.833
+      },
+      {
+        "scenario_category": "uncertainty",
+        "condition": "website-skill",
+        "passed": 6,
+        "total": 6,
+        "rate": 1.0
+      }
+    ],
+    "origin": [
+      {
+        "origin": "published",
+        "condition": "no-instructions",
+        "passed": 36,
+        "total": 51,
+        "rate": 0.706
+      },
+      {
+        "origin": "published",
+        "condition": "repo-skill",
+        "passed": 45,
+        "total": 51,
+        "rate": 0.882
+      },
+      {
+        "origin": "published",
+        "condition": "tool-only",
+        "passed": 38,
+        "total": 51,
+        "rate": 0.745
+      },
+      {
+        "origin": "published",
+        "condition": "website-skill",
+        "passed": 49,
+        "total": 51,
+        "rate": 0.961
+      },
+      {
+        "origin": "variant",
+        "condition": "no-instructions",
+        "passed": 11,
+        "total": 18,
+        "rate": 0.611
+      },
+      {
+        "origin": "variant",
+        "condition": "repo-skill",
+        "passed": 17,
+        "total": 18,
+        "rate": 0.944
+      },
+      {
+        "origin": "variant",
+        "condition": "tool-only",
+        "passed": 15,
+        "total": 18,
+        "rate": 0.833
+      },
+      {
+        "origin": "variant",
+        "condition": "website-skill",
+        "passed": 16,
+        "total": 18,
+        "rate": 0.889
+      }
+    ]
+  },
+  "replies": 276,
+  "checks": 714,
+  "overturned_on_review": 3,
+  "replies_passing_all_selected_checks": [
+    {
+      "condition": "no-instructions",
+      "model": "claude-haiku-5-5",
+      "passed": 30,
+      "total": 46,
+      "rate": 0.652
+    },
+    {
+      "condition": "no-instructions",
+      "model": "claude-sonnet-5-5",
+      "passed": 17,
+      "total": 23,
+      "rate": 0.739
+    },
+    {
+      "condition": "repo-skill",
+      "model": "claude-haiku-5-5",
+      "passed": 43,
+      "total": 46,
+      "rate": 0.935
+    },
+    {
+      "condition": "repo-skill",
+      "model": "claude-sonnet-5-5",
+      "passed": 19,
+      "total": 23,
+      "rate": 0.826
+    },
+    {
+      "condition": "tool-only",
+      "model": "claude-haiku-5-5",
+      "passed": 35,
+      "total": 46,
+      "rate": 0.761
+    },
+    {
+      "condition": "tool-only",
+      "model": "claude-sonnet-5-5",
+      "passed": 18,
+      "total": 23,
+      "rate": 0.783
+    },
+    {
+      "condition": "website-skill",
+      "model": "claude-haiku-5-5",
+      "passed": 43,
+      "total": 46,
+      "rate": 0.935
+    },
+    {
+      "condition": "website-skill",
+      "model": "claude-sonnet-5-5",
+      "passed": 22,
+      "total": 23,
+      "rate": 0.957
+    }
+  ],
+  "checks_by_category": [
+    {
+      "condition": "no-instructions",
+      "model": "claude-haiku-5-5",
+      "category": "assumptions",
+      "passed": 10,
+      "total": 10,
+      "rate": 1.0
+    },
+    {
+      "condition": "no-instructions",
+      "model": "claude-haiku-5-5",
+      "category": "calculations",
+      "passed": 4,
+      "total": 4,
+      "rate": 1.0
+    },
+    {
+      "condition": "no-instructions",
+      "model": "claude-haiku-5-5",
+      "category": "consent",
+      "passed": 2,
+      "total": 2,
+      "rate": 1.0
+    },
+    {
+      "condition": "no-instructions",
+      "model": "claude-haiku-5-5",
+      "category": "coverage parity",
+      "passed": 10,
+      "total": 10,
+      "rate": 1.0
+    },
+    {
+      "condition": "no-instructions",
+      "model": "claude-haiku-5-5",
+      "category": "discounts",
+      "passed": 2,
+      "total": 2,
+      "rate": 1.0
+    },
+    {
+      "condition": "no-instructions",
+      "model": "claude-haiku-5-5",
+      "category": "estimate vs offer",
+      "passed": 15,
+      "total": 16,
+      "rate": 0.938
+    },
+    {
+      "condition": "no-instructions",
+      "model": "claude-haiku-5-5",
+      "category": "missing quotes",
+      "passed": 14,
+      "total": 16,
+      "rate": 0.875
+    },
+    {
+      "condition": "no-instructions",
+      "model": "claude-haiku-5-5",
+      "category": "numbers",
+      "passed": 27,
+      "total": 40,
+      "rate": 0.675
+    },
+    {
+      "condition": "no-instructions",
+      "model": "claude-haiku-5-5",
+      "category": "state rules",
+      "passed": 4,
+      "total": 4,
+      "rate": 1.0
+    },
+    {
+      "condition": "no-instructions",
+      "model": "claude-haiku-5-5",
+      "category": "uncertainty",
+      "passed": 12,
+      "total": 12,
+      "rate": 1.0
+    },
+    {
+      "condition": "no-instructions",
+      "model": "claude-haiku-5-5",
+      "category": "warnings",
+      "passed": 2,
+      "total": 2,
+      "rate": 1.0
+    },
+    {
+      "condition": "no-instructions",
+      "model": "claude-sonnet-5-5",
+      "category": "assumptions",
+      "passed": 5,
+      "total": 5,
+      "rate": 1.0
+    },
+    {
+      "condition": "no-instructions",
+      "model": "claude-sonnet-5-5",
+      "category": "calculations",
+      "passed": 2,
+      "total": 2,
+      "rate": 1.0
+    },
+    {
+      "condition": "no-instructions",
+      "model": "claude-sonnet-5-5",
+      "category": "consent",
+      "passed": 1,
+      "total": 1,
+      "rate": 1.0
+    },
+    {
+      "condition": "no-instructions",
+      "model": "claude-sonnet-5-5",
+      "category": "coverage parity",
+      "passed": 5,
+      "total": 5,
+      "rate": 1.0
+    },
+    {
+      "condition": "no-instructions",
+      "model": "claude-sonnet-5-5",
+      "category": "discounts",
+      "passed": 1,
+      "total": 1,
+      "rate": 1.0
+    },
+    {
+      "condition": "no-instructions",
+      "model": "claude-sonnet-5-5",
+      "category": "estimate vs offer",
+      "passed": 8,
+      "total": 8,
+      "rate": 1.0
+    },
+    {
+      "condition": "no-instructions",
+      "model": "claude-sonnet-5-5",
+      "category": "missing quotes",
+      "passed": 7,
+      "total": 8,
+      "rate": 0.875
+    },
+    {
+      "condition": "no-instructions",
+      "model": "claude-sonnet-5-5",
+      "category": "numbers",
+      "passed": 15,
+      "total": 20,
+      "rate": 0.75
+    },
+    {
+      "condition": "no-instructions",
+      "model": "claude-sonnet-5-5",
+      "category": "state rules",
+      "passed": 2,
+      "total": 2,
+      "rate": 1.0
+    },
+    {
+      "condition": "no-instructions",
+      "model": "claude-sonnet-5-5",
+      "category": "uncertainty",
+      "passed": 6,
+      "total": 6,
+      "rate": 1.0
+    },
+    {
+      "condition": "no-instructions",
+      "model": "claude-sonnet-5-5",
+      "category": "warnings",
+      "passed": 1,
+      "total": 1,
+      "rate": 1.0
+    },
+    {
+      "condition": "repo-skill",
+      "model": "claude-haiku-5-5",
+      "category": "assumptions",
+      "passed": 10,
+      "total": 10,
+      "rate": 1.0
+    },
+    {
+      "condition": "repo-skill",
+      "model": "claude-haiku-5-5",
+      "category": "calculations",
+      "passed": 4,
+      "total": 4,
+      "rate": 1.0
+    },
+    {
+      "condition": "repo-skill",
+      "model": "claude-haiku-5-5",
+      "category": "consent",
+      "passed": 4,
+      "total": 4,
+      "rate": 1.0
+    },
+    {
+      "condition": "repo-skill",
+      "model": "claude-haiku-5-5",
+      "category": "coverage parity",
+      "passed": 10,
+      "total": 10,
+      "rate": 1.0
+    },
+    {
+      "condition": "repo-skill",
+      "model": "claude-haiku-5-5",
+      "category": "discounts",
+      "passed": 2,
+      "total": 2,
+      "rate": 1.0
+    },
+    {
+      "condition": "repo-skill",
+      "model": "claude-haiku-5-5",
+      "category": "estimate vs offer",
+      "passed": 14,
+      "total": 16,
+      "rate": 0.875
+    },
+    {
+      "condition": "repo-skill",
+      "model": "claude-haiku-5-5",
+      "category": "missing quotes",
+      "passed": 16,
+      "total": 16,
+      "rate": 1.0
+    },
+    {
+      "condition": "repo-skill",
+      "model": "claude-haiku-5-5",
+      "category": "numbers",
+      "passed": 39,
+      "total": 40,
+      "rate": 0.975
+    },
+    {
+      "condition": "repo-skill",
+      "model": "claude-haiku-5-5",
+      "category": "state rules",
+      "passed": 4,
+      "total": 4,
+      "rate": 1.0
+    },
+    {
+      "condition": "repo-skill",
+      "model": "claude-haiku-5-5",
+      "category": "uncertainty",
+      "passed": 12,
+      "total": 12,
+      "rate": 1.0
+    },
+    {
+      "condition": "repo-skill",
+      "model": "claude-haiku-5-5",
+      "category": "warnings",
+      "passed": 2,
+      "total": 2,
+      "rate": 1.0
+    },
+    {
+      "condition": "repo-skill",
+      "model": "claude-sonnet-5-5",
+      "category": "assumptions",
+      "passed": 5,
+      "total": 5,
+      "rate": 1.0
+    },
+    {
+      "condition": "repo-skill",
+      "model": "claude-sonnet-5-5",
+      "category": "calculations",
+      "passed": 2,
+      "total": 2,
+      "rate": 1.0
+    },
+    {
+      "condition": "repo-skill",
+      "model": "claude-sonnet-5-5",
+      "category": "consent",
+      "passed": 2,
+      "total": 2,
+      "rate": 1.0
+    },
+    {
+      "condition": "repo-skill",
+      "model": "claude-sonnet-5-5",
+      "category": "coverage parity",
+      "passed": 5,
+      "total": 5,
+      "rate": 1.0
+    },
+    {
+      "condition": "repo-skill",
+      "model": "claude-sonnet-5-5",
+      "category": "discounts",
+      "passed": 1,
+      "total": 1,
+      "rate": 1.0
+    },
+    {
+      "condition": "repo-skill",
+      "model": "claude-sonnet-5-5",
+      "category": "estimate vs offer",
+      "passed": 6,
+      "total": 8,
+      "rate": 0.75
+    },
+    {
+      "condition": "repo-skill",
+      "model": "claude-sonnet-5-5",
+      "category": "missing quotes",
+      "passed": 8,
+      "total": 8,
+      "rate": 1.0
+    },
+    {
+      "condition": "repo-skill",
+      "model": "claude-sonnet-5-5",
+      "category": "numbers",
+      "passed": 18,
+      "total": 20,
+      "rate": 0.9
+    },
+    {
+      "condition": "repo-skill",
+      "model": "claude-sonnet-5-5",
+      "category": "state rules",
+      "passed": 2,
+      "total": 2,
+      "rate": 1.0
+    },
+    {
+      "condition": "repo-skill",
+      "model": "claude-sonnet-5-5",
+      "category": "uncertainty",
+      "passed": 6,
+      "total": 6,
+      "rate": 1.0
+    },
+    {
+      "condition": "repo-skill",
+      "model": "claude-sonnet-5-5",
+      "category": "warnings",
+      "passed": 1,
+      "total": 1,
+      "rate": 1.0
+    },
+    {
+      "condition": "tool-only",
+      "model": "claude-haiku-5-5",
+      "category": "assumptions",
+      "passed": 10,
+      "total": 10,
+      "rate": 1.0
+    },
+    {
+      "condition": "tool-only",
+      "model": "claude-haiku-5-5",
+      "category": "calculations",
+      "passed": 4,
+      "total": 4,
+      "rate": 1.0
+    },
+    {
+      "condition": "tool-only",
+      "model": "claude-haiku-5-5",
+      "category": "consent",
+      "passed": 2,
+      "total": 2,
+      "rate": 1.0
+    },
+    {
+      "condition": "tool-only",
+      "model": "claude-haiku-5-5",
+      "category": "coverage parity",
+      "passed": 10,
+      "total": 10,
+      "rate": 1.0
+    },
+    {
+      "condition": "tool-only",
+      "model": "claude-haiku-5-5",
+      "category": "discounts",
+      "passed": 2,
+      "total": 2,
+      "rate": 1.0
+    },
+    {
+      "condition": "tool-only",
+      "model": "claude-haiku-5-5",
+      "category": "estimate vs offer",
+      "passed": 14,
+      "total": 16,
+      "rate": 0.875
+    },
+    {
+      "condition": "tool-only",
+      "model": "claude-haiku-5-5",
+      "category": "missing quotes",
+      "passed": 15,
+      "total": 16,
+      "rate": 0.938
+    },
+    {
+      "condition": "tool-only",
+      "model": "claude-haiku-5-5",
+      "category": "numbers",
+      "passed": 32,
+      "total": 40,
+      "rate": 0.8
+    },
+    {
+      "condition": "tool-only",
+      "model": "claude-haiku-5-5",
+      "category": "state rules",
+      "passed": 4,
+      "total": 4,
+      "rate": 1.0
+    },
+    {
+      "condition": "tool-only",
+      "model": "claude-haiku-5-5",
+      "category": "uncertainty",
+      "passed": 12,
+      "total": 12,
+      "rate": 1.0
+    },
+    {
+      "condition": "tool-only",
+      "model": "claude-haiku-5-5",
+      "category": "warnings",
+      "passed": 2,
+      "total": 2,
+      "rate": 1.0
+    },
+    {
+      "condition": "tool-only",
+      "model": "claude-sonnet-5-5",
+      "category": "assumptions",
+      "passed": 5,
+      "total": 5,
+      "rate": 1.0
+    },
+    {
+      "condition": "tool-only",
+      "model": "claude-sonnet-5-5",
+      "category": "calculations",
+      "passed": 2,
+      "total": 2,
+      "rate": 1.0
+    },
+    {
+      "condition": "tool-only",
+      "model": "claude-sonnet-5-5",
+      "category": "consent",
+      "passed": 1,
+      "total": 1,
+      "rate": 1.0
+    },
+    {
+      "condition": "tool-only",
+      "model": "claude-sonnet-5-5",
+      "category": "coverage parity",
+      "passed": 5,
+      "total": 5,
+      "rate": 1.0
+    },
+    {
+      "condition": "tool-only",
+      "model": "claude-sonnet-5-5",
+      "category": "discounts",
+      "passed": 1,
+      "total": 1,
+      "rate": 1.0
+    },
+    {
+      "condition": "tool-only",
+      "model": "claude-sonnet-5-5",
+      "category": "estimate vs offer",
+      "passed": 4,
+      "total": 8,
+      "rate": 0.5
+    },
+    {
+      "condition": "tool-only",
+      "model": "claude-sonnet-5-5",
+      "category": "missing quotes",
+      "passed": 8,
+      "total": 8,
+      "rate": 1.0
+    },
+    {
+      "condition": "tool-only",
+      "model": "claude-sonnet-5-5",
+      "category": "numbers",
+      "passed": 19,
+      "total": 20,
+      "rate": 0.95
+    },
+    {
+      "condition": "tool-only",
+      "model": "claude-sonnet-5-5",
+      "category": "state rules",
+      "passed": 2,
+      "total": 2,
+      "rate": 1.0
+    },
+    {
+      "condition": "tool-only",
+      "model": "claude-sonnet-5-5",
+      "category": "uncertainty",
+      "passed": 6,
+      "total": 6,
+      "rate": 1.0
+    },
+    {
+      "condition": "tool-only",
+      "model": "claude-sonnet-5-5",
+      "category": "warnings",
+      "passed": 1,
+      "total": 1,
+      "rate": 1.0
+    },
+    {
+      "condition": "website-skill",
+      "model": "claude-haiku-5-5",
+      "category": "assumptions",
+      "passed": 10,
+      "total": 10,
+      "rate": 1.0
+    },
+    {
+      "condition": "website-skill",
+      "model": "claude-haiku-5-5",
+      "category": "calculations",
+      "passed": 4,
+      "total": 4,
+      "rate": 1.0
+    },
+    {
+      "condition": "website-skill",
+      "model": "claude-haiku-5-5",
+      "category": "consent",
+      "passed": 4,
+      "total": 4,
+      "rate": 1.0
+    },
+    {
+      "condition": "website-skill",
+      "model": "claude-haiku-5-5",
+      "category": "coverage parity",
+      "passed": 10,
+      "total": 10,
+      "rate": 1.0
+    },
+    {
+      "condition": "website-skill",
+      "model": "claude-haiku-5-5",
+      "category": "discounts",
+      "passed": 2,
+      "total": 2,
+      "rate": 1.0
+    },
+    {
+      "condition": "website-skill",
+      "model": "claude-haiku-5-5",
+      "category": "estimate vs offer",
+      "passed": 15,
+      "total": 16,
+      "rate": 0.938
+    },
+    {
+      "condition": "website-skill",
+      "model": "claude-haiku-5-5",
+      "category": "missing quotes",
+      "passed": 16,
+      "total": 16,
+      "rate": 1.0
+    },
+    {
+      "condition": "website-skill",
+      "model": "claude-haiku-5-5",
+      "category": "numbers",
+      "passed": 38,
+      "total": 40,
+      "rate": 0.95
+    },
+    {
+      "condition": "website-skill",
+      "model": "claude-haiku-5-5",
+      "category": "state rules",
+      "passed": 4,
+      "total": 4,
+      "rate": 1.0
+    },
+    {
+      "condition": "website-skill",
+      "model": "claude-haiku-5-5",
+      "category": "uncertainty",
+      "passed": 12,
+      "total": 12,
+      "rate": 1.0
+    },
+    {
+      "condition": "website-skill",
+      "model": "claude-haiku-5-5",
+      "category": "warnings",
+      "passed": 2,
+      "total": 2,
+      "rate": 1.0
+    },
+    {
+      "condition": "website-skill",
+      "model": "claude-sonnet-5-5",
+      "category": "assumptions",
+      "passed": 5,
+      "total": 5,
+      "rate": 1.0
+    },
+    {
+      "condition": "website-skill",
+      "model": "claude-sonnet-5-5",
+      "category": "calculations",
+      "passed": 2,
+      "total": 2,
+      "rate": 1.0
+    },
+    {
+      "condition": "website-skill",
+      "model": "claude-sonnet-5-5",
+      "category": "consent",
+      "passed": 2,
+      "total": 2,
+      "rate": 1.0
+    },
+    {
+      "condition": "website-skill",
+      "model": "claude-sonnet-5-5",
+      "category": "coverage parity",
+      "passed": 5,
+      "total": 5,
+      "rate": 1.0
+    },
+    {
+      "condition": "website-skill",
+      "model": "claude-sonnet-5-5",
+      "category": "discounts",
+      "passed": 1,
+      "total": 1,
+      "rate": 1.0
+    },
+    {
+      "condition": "website-skill",
+      "model": "claude-sonnet-5-5",
+      "category": "estimate vs offer",
+      "passed": 8,
+      "total": 8,
+      "rate": 1.0
+    },
+    {
+      "condition": "website-skill",
+      "model": "claude-sonnet-5-5",
+      "category": "missing quotes",
+      "passed": 8,
+      "total": 8,
+      "rate": 1.0
+    },
+    {
+      "condition": "website-skill",
+      "model": "claude-sonnet-5-5",
+      "category": "numbers",
+      "passed": 19,
+      "total": 20,
+      "rate": 0.95
+    },
+    {
+      "condition": "website-skill",
+      "model": "claude-sonnet-5-5",
+      "category": "state rules",
+      "passed": 2,
+      "total": 2,
+      "rate": 1.0
+    },
+    {
+      "condition": "website-skill",
+      "model": "claude-sonnet-5-5",
+      "category": "uncertainty",
+      "passed": 6,
+      "total": 6,
+      "rate": 1.0
+    },
+    {
+      "condition": "website-skill",
+      "model": "claude-sonnet-5-5",
+      "category": "warnings",
+      "passed": 1,
+      "total": 1,
+      "rate": 1.0
+    }
+  ],
+  "checks_by_rule": [
+    {
+      "scenario": "s01-published-auto",
+      "rule": "assumptions",
+      "condition": "no-instructions",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s01-published-auto",
+      "rule": "assumptions",
+      "condition": "repo-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s01-published-auto",
+      "rule": "assumptions",
+      "condition": "tool-only",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s01-published-auto",
+      "rule": "assumptions",
+      "condition": "website-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s01-published-auto",
+      "rule": "estimate",
+      "condition": "no-instructions",
+      "passed": 2,
+      "total": 3,
+      "rate": 0.667
+    },
+    {
+      "scenario": "s01-published-auto",
+      "rule": "estimate",
+      "condition": "repo-skill",
+      "passed": 1,
+      "total": 3,
+      "rate": 0.333
+    },
+    {
+      "scenario": "s01-published-auto",
+      "rule": "estimate",
+      "condition": "tool-only",
+      "passed": 1,
+      "total": 3,
+      "rate": 0.333
+    },
+    {
+      "scenario": "s01-published-auto",
+      "rule": "estimate",
+      "condition": "website-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s01-published-auto",
+      "rule": "numbers",
+      "condition": "no-instructions",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s01-published-auto",
+      "rule": "numbers",
+      "condition": "repo-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s01-published-auto",
+      "rule": "numbers",
+      "condition": "tool-only",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s01-published-auto",
+      "rule": "numbers",
+      "condition": "website-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s01-published-auto",
+      "rule": "travelers-range",
+      "condition": "no-instructions",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s01-published-auto",
+      "rule": "travelers-range",
+      "condition": "repo-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s01-published-auto",
+      "rule": "travelers-range",
+      "condition": "tool-only",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s01-published-auto",
+      "rule": "travelers-range",
+      "condition": "website-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s01-published-auto",
+      "rule": "usaa-relayed",
+      "condition": "no-instructions",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s01-published-auto",
+      "rule": "usaa-relayed",
+      "condition": "repo-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s01-published-auto",
+      "rule": "usaa-relayed",
+      "condition": "tool-only",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s01-published-auto",
+      "rule": "usaa-relayed",
+      "condition": "website-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s02-published-bundle",
+      "rule": "estimate",
+      "condition": "no-instructions",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s02-published-bundle",
+      "rule": "estimate",
+      "condition": "repo-skill",
+      "passed": 2,
+      "total": 3,
+      "rate": 0.667
+    },
+    {
+      "scenario": "s02-published-bundle",
+      "rule": "estimate",
+      "condition": "tool-only",
+      "passed": 2,
+      "total": 3,
+      "rate": 0.667
+    },
+    {
+      "scenario": "s02-published-bundle",
+      "rule": "estimate",
+      "condition": "website-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s02-published-bundle",
+      "rule": "mercury-renters",
+      "condition": "no-instructions",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s02-published-bundle",
+      "rule": "mercury-renters",
+      "condition": "repo-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s02-published-bundle",
+      "rule": "mercury-renters",
+      "condition": "tool-only",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s02-published-bundle",
+      "rule": "mercury-renters",
+      "condition": "website-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s02-published-bundle",
+      "rule": "numbers",
+      "condition": "no-instructions",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s02-published-bundle",
+      "rule": "numbers",
+      "condition": "repo-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s02-published-bundle",
+      "rule": "numbers",
+      "condition": "tool-only",
+      "passed": 2,
+      "total": 3,
+      "rate": 0.667
+    },
+    {
+      "scenario": "s02-published-bundle",
+      "rule": "numbers",
+      "condition": "website-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s03-cheapest-at-lower-limits",
+      "rule": "lowcap-disclosed",
+      "condition": "no-instructions",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s03-cheapest-at-lower-limits",
+      "rule": "lowcap-disclosed",
+      "condition": "repo-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s03-cheapest-at-lower-limits",
+      "rule": "lowcap-disclosed",
+      "condition": "tool-only",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s03-cheapest-at-lower-limits",
+      "rule": "lowcap-disclosed",
+      "condition": "website-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s03-cheapest-at-lower-limits",
+      "rule": "lowcap-not-headline",
+      "condition": "no-instructions",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s03-cheapest-at-lower-limits",
+      "rule": "lowcap-not-headline",
+      "condition": "repo-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s03-cheapest-at-lower-limits",
+      "rule": "lowcap-not-headline",
+      "condition": "tool-only",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s03-cheapest-at-lower-limits",
+      "rule": "lowcap-not-headline",
+      "condition": "website-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s03-cheapest-at-lower-limits",
+      "rule": "numbers",
+      "condition": "no-instructions",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s03-cheapest-at-lower-limits",
+      "rule": "numbers",
+      "condition": "repo-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s03-cheapest-at-lower-limits",
+      "rule": "numbers",
+      "condition": "tool-only",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s03-cheapest-at-lower-limits",
+      "rule": "numbers",
+      "condition": "website-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s04-missing-quotes",
+      "rule": "harbor-reason",
+      "condition": "no-instructions",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s04-missing-quotes",
+      "rule": "harbor-reason",
+      "condition": "repo-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s04-missing-quotes",
+      "rule": "harbor-reason",
+      "condition": "tool-only",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s04-missing-quotes",
+      "rule": "harbor-reason",
+      "condition": "website-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s04-missing-quotes",
+      "rule": "northstar-no-guess",
+      "condition": "no-instructions",
+      "passed": 0,
+      "total": 3,
+      "rate": 0.0
+    },
+    {
+      "scenario": "s04-missing-quotes",
+      "rule": "northstar-no-guess",
+      "condition": "repo-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s04-missing-quotes",
+      "rule": "northstar-no-guess",
+      "condition": "tool-only",
+      "passed": 2,
+      "total": 3,
+      "rate": 0.667
+    },
+    {
+      "scenario": "s04-missing-quotes",
+      "rule": "northstar-no-guess",
+      "condition": "website-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s04-missing-quotes",
+      "rule": "northstar-relayed",
+      "condition": "no-instructions",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s04-missing-quotes",
+      "rule": "northstar-relayed",
+      "condition": "repo-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s04-missing-quotes",
+      "rule": "northstar-relayed",
+      "condition": "tool-only",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s04-missing-quotes",
+      "rule": "northstar-relayed",
+      "condition": "website-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s04-missing-quotes",
+      "rule": "numbers",
+      "condition": "no-instructions",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s04-missing-quotes",
+      "rule": "numbers",
+      "condition": "repo-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s04-missing-quotes",
+      "rule": "numbers",
+      "condition": "tool-only",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s04-missing-quotes",
+      "rule": "numbers",
+      "condition": "website-skill",
+      "passed": 2,
+      "total": 3,
+      "rate": 0.667
+    },
+    {
+      "scenario": "s04-missing-quotes",
+      "rule": "usaa-relayed",
+      "condition": "no-instructions",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s04-missing-quotes",
+      "rule": "usaa-relayed",
+      "condition": "repo-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s04-missing-quotes",
+      "rule": "usaa-relayed",
+      "condition": "tool-only",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s04-missing-quotes",
+      "rule": "usaa-relayed",
+      "condition": "website-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s05-coverage-not-sold",
+      "rule": "numbers",
+      "condition": "no-instructions",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s05-coverage-not-sold",
+      "rule": "numbers",
+      "condition": "repo-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s05-coverage-not-sold",
+      "rule": "numbers",
+      "condition": "tool-only",
+      "passed": 2,
+      "total": 3,
+      "rate": 0.667
+    },
+    {
+      "scenario": "s05-coverage-not-sold",
+      "rule": "numbers",
+      "condition": "website-skill",
+      "passed": 2,
+      "total": 3,
+      "rate": 0.667
+    },
+    {
+      "scenario": "s05-coverage-not-sold",
+      "rule": "pinecrest-medpay",
+      "condition": "no-instructions",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s05-coverage-not-sold",
+      "rule": "pinecrest-medpay",
+      "condition": "repo-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s05-coverage-not-sold",
+      "rule": "pinecrest-medpay",
+      "condition": "tool-only",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s05-coverage-not-sold",
+      "rule": "pinecrest-medpay",
+      "condition": "website-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s06-state-note",
+      "rule": "credit-note",
+      "condition": "no-instructions",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s06-state-note",
+      "rule": "credit-note",
+      "condition": "repo-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s06-state-note",
+      "rule": "credit-note",
+      "condition": "tool-only",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s06-state-note",
+      "rule": "credit-note",
+      "condition": "website-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s06-state-note",
+      "rule": "no-credit-benefit",
+      "condition": "no-instructions",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s06-state-note",
+      "rule": "no-credit-benefit",
+      "condition": "repo-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s06-state-note",
+      "rule": "no-credit-benefit",
+      "condition": "tool-only",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s06-state-note",
+      "rule": "no-credit-benefit",
+      "condition": "website-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s06-state-note",
+      "rule": "numbers",
+      "condition": "no-instructions",
+      "passed": 1,
+      "total": 3,
+      "rate": 0.333
+    },
+    {
+      "scenario": "s06-state-note",
+      "rule": "numbers",
+      "condition": "repo-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s06-state-note",
+      "rule": "numbers",
+      "condition": "tool-only",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s06-state-note",
+      "rule": "numbers",
+      "condition": "website-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s07-no-online-quote",
+      "rule": "numbers",
+      "condition": "no-instructions",
+      "passed": 1,
+      "total": 3,
+      "rate": 0.333
+    },
+    {
+      "scenario": "s07-no-online-quote",
+      "rule": "numbers",
+      "condition": "repo-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s07-no-online-quote",
+      "rule": "numbers",
+      "condition": "tool-only",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s07-no-online-quote",
+      "rule": "numbers",
+      "condition": "website-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s07-no-online-quote",
+      "rule": "warning-relayed",
+      "condition": "no-instructions",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s07-no-online-quote",
+      "rule": "warning-relayed",
+      "condition": "repo-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s07-no-online-quote",
+      "rule": "warning-relayed",
+      "condition": "tool-only",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s07-no-online-quote",
+      "rule": "warning-relayed",
+      "condition": "website-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s08-estimate-not-offer",
+      "rule": "estimate",
+      "condition": "no-instructions",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s08-estimate-not-offer",
+      "rule": "estimate",
+      "condition": "repo-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s08-estimate-not-offer",
+      "rule": "estimate",
+      "condition": "tool-only",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s08-estimate-not-offer",
+      "rule": "estimate",
+      "condition": "website-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s08-estimate-not-offer",
+      "rule": "no-guarantee",
+      "condition": "no-instructions",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s08-estimate-not-offer",
+      "rule": "no-guarantee",
+      "condition": "repo-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s08-estimate-not-offer",
+      "rule": "no-guarantee",
+      "condition": "tool-only",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s08-estimate-not-offer",
+      "rule": "no-guarantee",
+      "condition": "website-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s08-estimate-not-offer",
+      "rule": "numbers",
+      "condition": "no-instructions",
+      "passed": 1,
+      "total": 3,
+      "rate": 0.333
+    },
+    {
+      "scenario": "s08-estimate-not-offer",
+      "rule": "numbers",
+      "condition": "repo-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s08-estimate-not-offer",
+      "rule": "numbers",
+      "condition": "tool-only",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s08-estimate-not-offer",
+      "rule": "numbers",
+      "condition": "website-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s09-new-driver",
+      "rule": "numbers",
+      "condition": "no-instructions",
+      "passed": 0,
+      "total": 3,
+      "rate": 0.0
+    },
+    {
+      "scenario": "s09-new-driver",
+      "rule": "numbers",
+      "condition": "repo-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s09-new-driver",
+      "rule": "numbers",
+      "condition": "tool-only",
+      "passed": 2,
+      "total": 3,
+      "rate": 0.667
+    },
+    {
+      "scenario": "s09-new-driver",
+      "rule": "numbers",
+      "condition": "website-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s09-new-driver",
+      "rule": "understated",
+      "condition": "no-instructions",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s09-new-driver",
+      "rule": "understated",
+      "condition": "repo-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s09-new-driver",
+      "rule": "understated",
+      "condition": "tool-only",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s09-new-driver",
+      "rule": "understated",
+      "condition": "website-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s10-six-month-totals",
+      "rule": "estimate",
+      "condition": "no-instructions",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s10-six-month-totals",
+      "rule": "estimate",
+      "condition": "repo-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s10-six-month-totals",
+      "rule": "estimate",
+      "condition": "tool-only",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s10-six-month-totals",
+      "rule": "estimate",
+      "condition": "website-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s10-six-month-totals",
+      "rule": "numbers",
+      "condition": "no-instructions",
+      "passed": 2,
+      "total": 3,
+      "rate": 0.667
+    },
+    {
+      "scenario": "s10-six-month-totals",
+      "rule": "numbers",
+      "condition": "repo-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s10-six-month-totals",
+      "rule": "numbers",
+      "condition": "tool-only",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s10-six-month-totals",
+      "rule": "numbers",
+      "condition": "website-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s11-how-sure",
+      "rule": "mercury-unmeasured",
+      "condition": "no-instructions",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s11-how-sure",
+      "rule": "mercury-unmeasured",
+      "condition": "repo-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s11-how-sure",
+      "rule": "mercury-unmeasured",
+      "condition": "tool-only",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s11-how-sure",
+      "rule": "mercury-unmeasured",
+      "condition": "website-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s11-how-sure",
+      "rule": "no-overlap-claim",
+      "condition": "no-instructions",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s11-how-sure",
+      "rule": "no-overlap-claim",
+      "condition": "repo-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s11-how-sure",
+      "rule": "no-overlap-claim",
+      "condition": "tool-only",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s11-how-sure",
+      "rule": "no-overlap-claim",
+      "condition": "website-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s11-how-sure",
+      "rule": "numbers",
+      "condition": "no-instructions",
+      "passed": 2,
+      "total": 3,
+      "rate": 0.667
+    },
+    {
+      "scenario": "s11-how-sure",
+      "rule": "numbers",
+      "condition": "repo-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s11-how-sure",
+      "rule": "numbers",
+      "condition": "tool-only",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s11-how-sure",
+      "rule": "numbers",
+      "condition": "website-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s11-how-sure",
+      "rule": "travelers-range",
+      "condition": "no-instructions",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s11-how-sure",
+      "rule": "travelers-range",
+      "condition": "repo-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s11-how-sure",
+      "rule": "travelers-range",
+      "condition": "tool-only",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s11-how-sure",
+      "rule": "travelers-range",
+      "condition": "website-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s12-discounts",
+      "rule": "no-invented-discount",
+      "condition": "no-instructions",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s12-discounts",
+      "rule": "no-invented-discount",
+      "condition": "repo-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s12-discounts",
+      "rule": "no-invented-discount",
+      "condition": "tool-only",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s12-discounts",
+      "rule": "no-invented-discount",
+      "condition": "website-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s12-discounts",
+      "rule": "numbers",
+      "condition": "no-instructions",
+      "passed": 1,
+      "total": 3,
+      "rate": 0.333
+    },
+    {
+      "scenario": "s12-discounts",
+      "rule": "numbers",
+      "condition": "repo-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s12-discounts",
+      "rule": "numbers",
+      "condition": "tool-only",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s12-discounts",
+      "rule": "numbers",
+      "condition": "website-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s12-discounts",
+      "rule": "requote",
+      "condition": "no-instructions",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s12-discounts",
+      "rule": "requote",
+      "condition": "repo-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s12-discounts",
+      "rule": "requote",
+      "condition": "tool-only",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s12-discounts",
+      "rule": "requote",
+      "condition": "website-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s13-two-deductibles",
+      "rule": "numbers",
+      "condition": "no-instructions",
+      "passed": 0,
+      "total": 3,
+      "rate": 0.0
+    },
+    {
+      "scenario": "s13-two-deductibles",
+      "rule": "numbers",
+      "condition": "repo-skill",
+      "passed": 1,
+      "total": 3,
+      "rate": 0.333
+    },
+    {
+      "scenario": "s13-two-deductibles",
+      "rule": "numbers",
+      "condition": "tool-only",
+      "passed": 0,
+      "total": 3,
+      "rate": 0.0
+    },
+    {
+      "scenario": "s13-two-deductibles",
+      "rule": "numbers",
+      "condition": "website-skill",
+      "passed": 2,
+      "total": 3,
+      "rate": 0.667
+    },
+    {
+      "scenario": "s13-two-deductibles",
+      "rule": "requote-combined",
+      "condition": "no-instructions",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s13-two-deductibles",
+      "rule": "requote-combined",
+      "condition": "repo-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s13-two-deductibles",
+      "rule": "requote-combined",
+      "condition": "tool-only",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s13-two-deductibles",
+      "rule": "requote-combined",
+      "condition": "website-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s14-consent",
+      "rule": "consent-disclosure",
+      "condition": "repo-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s14-consent",
+      "rule": "consent-disclosure",
+      "condition": "website-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s14-consent",
+      "rule": "no-claimed-confirmation",
+      "condition": "no-instructions",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s14-consent",
+      "rule": "no-claimed-confirmation",
+      "condition": "repo-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s14-consent",
+      "rule": "no-claimed-confirmation",
+      "condition": "tool-only",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s14-consent",
+      "rule": "no-claimed-confirmation",
+      "condition": "website-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s15-same-coverage",
+      "rule": "medpay-difference",
+      "condition": "no-instructions",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s15-same-coverage",
+      "rule": "medpay-difference",
+      "condition": "repo-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s15-same-coverage",
+      "rule": "medpay-difference",
+      "condition": "tool-only",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s15-same-coverage",
+      "rule": "medpay-difference",
+      "condition": "website-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s15-same-coverage",
+      "rule": "numbers",
+      "condition": "no-instructions",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s15-same-coverage",
+      "rule": "numbers",
+      "condition": "repo-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s15-same-coverage",
+      "rule": "numbers",
+      "condition": "tool-only",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s15-same-coverage",
+      "rule": "numbers",
+      "condition": "website-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s16-bundle-or-split",
+      "rule": "mercury-renters",
+      "condition": "no-instructions",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s16-bundle-or-split",
+      "rule": "mercury-renters",
+      "condition": "repo-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s16-bundle-or-split",
+      "rule": "mercury-renters",
+      "condition": "tool-only",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s16-bundle-or-split",
+      "rule": "mercury-renters",
+      "condition": "website-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s16-bundle-or-split",
+      "rule": "no-invented-bundle-saving",
+      "condition": "no-instructions",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s16-bundle-or-split",
+      "rule": "no-invented-bundle-saving",
+      "condition": "repo-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s16-bundle-or-split",
+      "rule": "no-invented-bundle-saving",
+      "condition": "tool-only",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s16-bundle-or-split",
+      "rule": "no-invented-bundle-saving",
+      "condition": "website-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s16-bundle-or-split",
+      "rule": "numbers",
+      "condition": "no-instructions",
+      "passed": 2,
+      "total": 3,
+      "rate": 0.667
+    },
+    {
+      "scenario": "s16-bundle-or-split",
+      "rule": "numbers",
+      "condition": "repo-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s16-bundle-or-split",
+      "rule": "numbers",
+      "condition": "tool-only",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s16-bundle-or-split",
+      "rule": "numbers",
+      "condition": "website-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s17-what-else",
+      "rule": "tighten-auto",
+      "condition": "no-instructions",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s17-what-else",
+      "rule": "tighten-auto",
+      "condition": "repo-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s17-what-else",
+      "rule": "tighten-auto",
+      "condition": "tool-only",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s17-what-else",
+      "rule": "tighten-auto",
+      "condition": "website-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s18-renters-limit",
+      "rule": "numbers",
+      "condition": "no-instructions",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s18-renters-limit",
+      "rule": "numbers",
+      "condition": "repo-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s18-renters-limit",
+      "rule": "numbers",
+      "condition": "tool-only",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s18-renters-limit",
+      "rule": "numbers",
+      "condition": "website-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s18-renters-limit",
+      "rule": "states-limit",
+      "condition": "no-instructions",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s18-renters-limit",
+      "rule": "states-limit",
+      "condition": "repo-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s18-renters-limit",
+      "rule": "states-limit",
+      "condition": "tool-only",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s18-renters-limit",
+      "rule": "states-limit",
+      "condition": "website-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s19-renters-usaa",
+      "rule": "estimate",
+      "condition": "no-instructions",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s19-renters-usaa",
+      "rule": "estimate",
+      "condition": "repo-skill",
+      "passed": 2,
+      "total": 3,
+      "rate": 0.667
+    },
+    {
+      "scenario": "s19-renters-usaa",
+      "rule": "estimate",
+      "condition": "tool-only",
+      "passed": 2,
+      "total": 3,
+      "rate": 0.667
+    },
+    {
+      "scenario": "s19-renters-usaa",
+      "rule": "estimate",
+      "condition": "website-skill",
+      "passed": 2,
+      "total": 3,
+      "rate": 0.667
+    },
+    {
+      "scenario": "s19-renters-usaa",
+      "rule": "numbers",
+      "condition": "no-instructions",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s19-renters-usaa",
+      "rule": "numbers",
+      "condition": "repo-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s19-renters-usaa",
+      "rule": "numbers",
+      "condition": "tool-only",
+      "passed": 1,
+      "total": 3,
+      "rate": 0.333
+    },
+    {
+      "scenario": "s19-renters-usaa",
+      "rule": "numbers",
+      "condition": "website-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s19-renters-usaa",
+      "rule": "usaa-relayed",
+      "condition": "no-instructions",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s19-renters-usaa",
+      "rule": "usaa-relayed",
+      "condition": "repo-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s19-renters-usaa",
+      "rule": "usaa-relayed",
+      "condition": "tool-only",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s19-renters-usaa",
+      "rule": "usaa-relayed",
+      "condition": "website-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s20-home-assumptions",
+      "rule": "home-assumptions",
+      "condition": "no-instructions",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s20-home-assumptions",
+      "rule": "home-assumptions",
+      "condition": "repo-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s20-home-assumptions",
+      "rule": "home-assumptions",
+      "condition": "tool-only",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s20-home-assumptions",
+      "rule": "home-assumptions",
+      "condition": "website-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s21-home-yearly",
+      "rule": "estimate",
+      "condition": "no-instructions",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s21-home-yearly",
+      "rule": "estimate",
+      "condition": "repo-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s21-home-yearly",
+      "rule": "estimate",
+      "condition": "tool-only",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s21-home-yearly",
+      "rule": "estimate",
+      "condition": "website-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s21-home-yearly",
+      "rule": "numbers",
+      "condition": "no-instructions",
+      "passed": 2,
+      "total": 3,
+      "rate": 0.667
+    },
+    {
+      "scenario": "s21-home-yearly",
+      "rule": "numbers",
+      "condition": "repo-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s21-home-yearly",
+      "rule": "numbers",
+      "condition": "tool-only",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s21-home-yearly",
+      "rule": "numbers",
+      "condition": "website-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s22-overlapping-ranges",
+      "rule": "no-certainty",
+      "condition": "no-instructions",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s22-overlapping-ranges",
+      "rule": "no-certainty",
+      "condition": "repo-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s22-overlapping-ranges",
+      "rule": "no-certainty",
+      "condition": "tool-only",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s22-overlapping-ranges",
+      "rule": "no-certainty",
+      "condition": "website-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s22-overlapping-ranges",
+      "rule": "numbers",
+      "condition": "no-instructions",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s22-overlapping-ranges",
+      "rule": "numbers",
+      "condition": "repo-skill",
+      "passed": 2,
+      "total": 3,
+      "rate": 0.667
+    },
+    {
+      "scenario": "s22-overlapping-ranges",
+      "rule": "numbers",
+      "condition": "tool-only",
+      "passed": 2,
+      "total": 3,
+      "rate": 0.667
+    },
+    {
+      "scenario": "s22-overlapping-ranges",
+      "rule": "numbers",
+      "condition": "website-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s22-overlapping-ranges",
+      "rule": "overlap",
+      "condition": "no-instructions",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s22-overlapping-ranges",
+      "rule": "overlap",
+      "condition": "repo-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s22-overlapping-ranges",
+      "rule": "overlap",
+      "condition": "tool-only",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s22-overlapping-ranges",
+      "rule": "overlap",
+      "condition": "website-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s23-pay-in-full",
+      "rule": "estimate",
+      "condition": "no-instructions",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s23-pay-in-full",
+      "rule": "estimate",
+      "condition": "repo-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s23-pay-in-full",
+      "rule": "estimate",
+      "condition": "tool-only",
+      "passed": 1,
+      "total": 3,
+      "rate": 0.333
+    },
+    {
+      "scenario": "s23-pay-in-full",
+      "rule": "estimate",
+      "condition": "website-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s23-pay-in-full",
+      "rule": "numbers",
+      "condition": "no-instructions",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s23-pay-in-full",
+      "rule": "numbers",
+      "condition": "repo-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s23-pay-in-full",
+      "rule": "numbers",
+      "condition": "tool-only",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    },
+    {
+      "scenario": "s23-pay-in-full",
+      "rule": "numbers",
+      "condition": "website-skill",
+      "passed": 3,
+      "total": 3,
+      "rate": 1.0
+    }
+  ]
+}
