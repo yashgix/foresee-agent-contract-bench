@@ -71,14 +71,18 @@ def figures(run: str) -> dict[str, str]:
 
 def examples(folder: Path) -> str:
     """Pairs of verbatim excerpts; each part must appear in the recorded reply (whitespace aside)."""
-    replies = {r["key"]: " ".join(r["reply"].split()) for r in load(folder / "answers.jsonl")}
+
+    def plain(text: str) -> str:  # whitespace and Markdown bold don't change the words
+        return " ".join(text.replace("**", "").split())
+
+    replies = {r["key"]: plain(r["reply"]) for r in load(folder / "answers.jsonl")}
     blocks = []
     for pair in load(REPO / "docs" / "examples.json"):
         cells = []
         for side in ("lost", "kept"):
             item = pair[side]
             for part in item["parts"]:
-                if " ".join(part.split()) not in replies[item["key"]]:
+                if plain(part) not in replies[item["key"]]:
                     raise SystemExit(f"excerpt not found in {item['key']}: {part[:40]!r}")
             quote = " … ".join(html.escape(p) for p in item["parts"])
             word = "Lost" if side == "lost" else "Kept"

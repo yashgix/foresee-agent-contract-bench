@@ -5,12 +5,15 @@ how much do the provider's own instructions help?
 
 **Write-up: [yashgix.github.io/foresee-agent-contract-bench](https://yashgix.github.io/foresee-agent-contract-bench/)**
 
-[Foresee](https://go-foresee.com) gives AI assistants structured insurance estimates over MCP, for auto, home and
-renters (auto in California is live today): a monthly estimate
-per carrier with its range, per-coverage costs, a price for every limit and deductible, the assumptions behind it, and
-which carriers couldn't be priced and why. It also publishes detailed instructions for how assistants should present
-them. This bench measures what survives when an assistant turns that result into a few sentences, and checks that
-Foresee's agent-facing documents stay consistent with each other.
+[Foresee](https://go-foresee.com) gives AI assistants structured insurance estimates for auto, home and renters (auto
+in California is live today) through MCP, the standard way assistants call outside tools. For each carrier it supports
+it returns a monthly estimate with its range, per-coverage costs, a price ladder showing how the price changes for each
+listed limit or deductible (one change at a time), and the assumptions behind it; for carriers it couldn't price, it
+gives the reason. It also publishes detailed instructions for how assistants should present all this.
+
+This bench measures what survives when an assistant turns that result into a few sentences, and checks that
+Foresee's agent-facing documents stay consistent with each other. It evaluates assistant replies, not the accuracy of
+Foresee's prices.
 
 An independent project, not affiliated with Foresee. No call is made to Foresee's quoting tools; scoring runs offline
 from recorded replies.
@@ -28,19 +31,20 @@ were set by hand where the pattern is known to be wrong (`results/v3/review.json
 | + website skill | 65/69 | 0 | 3 | 0 |
 | + repository skill | 62/69 | 0 | 3 | 0 |
 
-- **Kept reliably in every setup:** different limits beside a lower price, carriers without a price and their own
-  reasons, assumptions, state notes, ranges.
-- **Lost sometimes:** saying the prices are estimates (12 of the 84 replies where it was checked), and prices worked
-  out from the price ladder or coverage lines in ways Foresee says aren't valid, plus a few arithmetic slips.
-- **What helped:** Foresee's tool description removed the unit errors, though on its own it left more unsupported
-  prices (9) than no instructions (6); with either skill, guessed reasons went to zero and unsupported prices to 3.
-- **Grader vs hand labels:** 91 of 94 labelled checks agree (1 false failure among 48 failures; no misses in a
-  fixed-seed sample of 44 passes; 2 misses found outside the sample, recorded). Labels were made by reading each full
-  reply.
+- **Generally preserved:** every check on showing different limits beside a lower price, relaying carriers without a
+  price with their own reason, naming assumptions, state notes and price ranges passed in every setup.
+- **Errors observed:** replies that never said the prices are estimates (12 of the 84 where it was checked); prices
+  worked out from the price ladder or coverage lines in ways Foresee says aren't valid, and a few arithmetic slips;
+  without instructions, a $100,000 limit written as "$100" and guessed reasons for a missing quote.
+- **With Foresee's instructions:** the tool description removed the unit errors, though on its own it left more
+  unsupported prices (9) than no instructions (6); with either skill, guessed reasons went to zero and unsupported
+  prices to 3.
+- **Grader check:** on 94 checks labelled during development by reading each full reply (not by an independent
+  evaluator), the grader agreed on 91: 1 false failure among 48 failures, no misses in a fixed-seed sample of 44 passes,
+  and 2 misses found outside the sample. The grader is a set of pattern rules, so it can miss unusual wording.
 - The consent-disclosure check applies only to the two skill setups, the only ones that describe live confirmation.
 
-Small samples: read gaps of a few replies as direction, not precision. Results are about assistant replies, not the
-accuracy of Foresee's estimates.
+Small samples: read gaps of a few replies as direction, not precision.
 
 **Contract checks:** 10 consistency observations about Foresee's published documents (texts that differ from each
 other or from the live schema, two notes about one example, one comparison with the MCP specification), e.g. the docs suggest `auto.drivers[].years_licensed`, which the live input schema doesn't name. These
@@ -95,9 +99,9 @@ No live quotes; the published examples may predate the current server. Claude mo
 the model as text in the prompt, without the `presentation` field. "No instructions" is a bare baseline; real MCP
 clients always receive Foresee's tool description. Pattern rules miss some paraphrases and some subtle errors.
 
-## How it was built
+## About
 
-Researched, designed and evaluated by Yash Gupta, working in Claude Code from Arcturus, a multi-agent engineering
-workstation, with independent code review by OpenAI Codex (final re-check: GO).
+An independent engineering project by Yash Gupta, exploring agent-response reliability, automated evaluations and
+regression testing. The grading code was independently reviewed by OpenAI Codex (final re-check: GO).
 
 Shared to show the work; not licensed for reuse.

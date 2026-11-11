@@ -204,11 +204,11 @@ footer a { color: var(--muted); }
       <div class="col stack" style="margin-inline:0">
         <div class="eyebrow">Foresee</div>
         <h2>Insurance shopping built for AI assistants</h2>
-        <p class="lead">Foresee is built for personal insurance: auto, home and renters, priced alone or as a bundle. Auto in California is live today. An assistant sends a few facts and gets an estimate from every supported carrier, with the detail needed to explain it well.</p>
+        <p class="lead">Foresee is built for personal insurance: auto, home and renters, priced alone or as a bundle. Auto in California is live today. An assistant sends a few facts and gets estimates from the carriers Foresee supports, with the detail needed to explain them, and the reason whenever a carrier can't be priced.</p>
       </div>
       <div class="cards">
-        <div class="card"><div class="icon">≡</div><h3>Rich, structured estimates</h3><p>A monthly estimate per carrier with its range, the cost of each coverage, a price for every limit and deductible, and the assumptions behind it.</p></div>
-        <div class="card"><div class="icon">⇄</div><h3>Built for agents</h3><p>An MCP server with no account needed, plus detailed instructions that tell assistants how to present the result: what to say, and what never to guess.</p></div>
+        <div class="card"><div class="icon">≡</div><h3>Rich, structured estimates</h3><p>A monthly estimate per carrier with its range, the cost of each coverage, a price ladder showing how the price changes for each listed limit or deductible (one change at a time), and the assumptions behind it.</p></div>
+        <div class="card"><div class="icon">⇄</div><h3>Built for agents</h3><p>An MCP server (the standard way AI assistants call outside tools) with no account needed, plus detailed instructions that tell assistants how to present the result: what to say, and what never to guess.</p></div>
         <div class="card"><div class="icon">✓</div><h3>Confirmation on carrier sites</h3><p>With the user's consent, Foresee's agents complete carriers' own quote forms and read back the price the carrier shows.</p></div>
       </div>
       <blockquote class="quote">
@@ -229,7 +229,7 @@ footer a { color: var(--muted); }
         <table>
           <thead><tr><th>Service</th><th>Before showing a price</th><th>What the assistant gets</th></tr></thead>
           <tbody>
-            <tr class="us"><td>Foresee</td><td>A few facts, no identity</td><td>An estimate from every supported carrier, with range, assumptions and coverage detail; optional confirmation on carrier sites</td></tr>
+            <tr class="us"><td>Foresee</td><td>A few facts, no identity</td><td>Estimates from the carriers it supports, with range, assumptions and coverage detail, and the reason when a carrier can't be priced; optional confirmation on carrier sites</td></tr>
             <tr><td>Insurify</td><td>The person accepts on a consent page</td><td>Real-time quotes from participating carriers; assistants are asked not to rank them</td></tr>
             <tr><td>The Zebra</td><td>Name, email and phone</td><td>Estimates from carriers sold on The Zebra; final price at purchase</td></tr>
             <tr><td>Jerry</td><td>Phone sign-in (OAuth)</td><td>Estimates, then a final price; purchase in Jerry's app</td></tr>
@@ -268,7 +268,7 @@ footer a { color: var(--muted); }
       <div class="cards">
         <div class="card"><h3>1 · Replay and grade</h3><p>23 consumer questions about Foresee's 4 published example results (17 unchanged, 6 with a clearly labelled fictional carrier added). Each is answered by Claude Haiku and Sonnet under 4 setups: no instructions, Foresee's tool description, and each published version of its skill. Deterministic rules taken from Foresee's own guidance grade every reply.</p></div>
         <div class="card"><h3>2 · Contract checks</h3><p>The tool compares Foresee's live MCP schema, docs and skills with each other, so an inconsistency is caught automatically. Renaming one field in the schema makes the check fail; updating the docs makes it pass again.</p></div>
-        <div class="card"><h3>How it's checked</h3><p>Recorded replies are re-scored without any model calls, and the grader's verdicts were compared with hand labels. The runner uses a subscription with every tool off and refuses API keys. 88 tests, and independent code review by OpenAI Codex (final re-check: GO).</p></div>
+        <div class="card"><h3>How it's checked</h3><p>Recorded replies are re-scored without any model calls, and the grader's verdicts were compared with hand labels. The runner uses a subscription with every tool off and refuses API keys. 88 tests, and independent review of the grading code by OpenAI Codex (final re-check: GO).</p></div>
       </div>
     </div>
   </section>
@@ -278,7 +278,7 @@ footer a { color: var(--muted); }
       <div class="col stack" style="margin-inline:0">
         <div class="eyebrow">Results</div>
         <h2>Foresee's instructions measurably help</h2>
-        <p class="lead">Replies that passed every check that applied to them, out of 69 per setup.</p>
+        <p class="lead">Replies that passed every check that applied to them, out of 69 per setup. This measures the assistants' replies, not the accuracy of Foresee's prices.</p>
       </div>
       <div class="chart">
         <h3>Replies passing all selected checks</h3>
@@ -314,7 +314,7 @@ footer a { color: var(--muted); }
           </div></div>
       </div>
       <div class="cards">
-        <div class="card"><h3 style="color:var(--kept)">Kept reliably</h3><p>Different limits beside a lower price, carriers without a price and their reasons, assumptions, state notes and ranges passed their checks in every setup. Foresee's result carries these facts itself, and assistants pass them on.</p></div>
+        <div class="card"><h3 style="color:var(--kept)">Generally kept</h3><p>Every check on showing different limits beside a lower price, relaying carriers without a price with their own reason, naming assumptions, state notes and ranges passed in every setup. Foresee's result carries these facts itself, and assistants pass them on.</p></div>
         <div class="card"><h3 style="color:var(--lost)">Still lost sometimes</h3><p>Saying the prices are estimates (12 of 84 replies where it was checked didn't), and prices worked out from the ladder or line items in ways Foresee says aren't valid.</p></div>
         <div class="card"><h3 style="color:var(--accent-ink)">What helped</h3><p>The tool description removed the unit errors (12 → 0), though on its own it left more unsupported prices (9) than no instructions (6). With either skill, guessed reasons went to zero and unsupported prices to 3 and 3.</p></div>
       </div>
@@ -326,11 +326,11 @@ footer a { color: var(--muted); }
       <div class="col stack" style="margin-inline:0">
         <div class="eyebrow">Examples</div>
         <h2>The same question, different setups</h2>
-        <p class="lead">Excerpts from recorded replies, word for word. The carriers and prices come from Foresee's published example; the user details are made up for the test.</p>
+        <p class="lead">Excerpts from recorded replies, word for word. The carriers and prices come from Foresee's published examples; the user details are made up for the test.</p>
       </div>
-      <div class="stack" style="gap:0.6rem"><p class="ask"><b>Asked:</b> “I&#x27;m 41, but I only got my driver&#x27;s license 8 months ago. What would Mercury, Travelers and USAA cost?”</p><div class="pair"><div class="reply lost"><div class="who">Lost · No instructions</div><p>Removing it raises the prices by at least 25% … | Mercury | $235/mo | ~$294/mo |</p><p class="note">A new price worked out from a discount, which Foresee&#x27;s result does not support.</p></div><div class="reply kept"><div class="who">Kept · Repository skill</div><p>gave you California&#x27;s Good Driver discount (at least 20% off). With under 3 years of licensing you likely wouldn&#x27;t qualify, so both prices below are understated.</p><p class="note">Uses the assumption Foresee reported, and offers to re-quote.</p></div></div></div>
+      <div class="stack" style="gap:0.6rem"><p class="ask"><b>Asked:</b> “I&#x27;m 41, but I only got my driver&#x27;s license 8 months ago. What would Mercury, Travelers and USAA cost?”</p><div class="pair"><div class="reply lost"><div class="who">Lost · No instructions</div><p>Removing it raises the prices by at least 25% … | Mercury | $235/mo | ~$294/mo |</p><p class="note">A new price worked out from a discount, which Foresee&#x27;s result does not support.</p></div><div class="reply kept"><div class="who">Kept · Repository skill</div><p>The system filled in &quot;first licensed at age 16&quot;, which gave you California&#x27;s Good Driver discount (at least 20% off). With under 3 years of licensing you likely wouldn&#x27;t qualify, so both prices below are understated.</p><p class="note">Uses the assumption Foresee reported, and offers to re-quote.</p></div></div></div>
 <div class="stack" style="gap:0.6rem"><p class="ask"><b>Asked:</b> “Can you check the cheapest one&#x27;s price directly with the carrier?”</p><div class="pair"><div class="reply lost"><div class="who">Lost · No instructions</div><p>100/300 bodily injury, $100 property damage, and $500 comprehensive and collision</p><p class="note">Foresee&#x27;s pd is in thousands: the limit is $100,000.</p></div><div class="reply kept"><div class="who">Kept · Tool description</div><p>(100/300 BI, $100k PD, $500 collision and comprehensive deductibles)</p><p class="note">The tool description explains the units.</p></div></div></div>
-<div class="stack" style="gap:0.6rem"><p class="ask"><b>Asked:</b> “Go ahead and confirm it live with Mercury. I&#x27;m Jane Example, 1 Sample St, Los Angeles...”</p><div class="pair"><div class="reply lost"><div class="who">Lost · Tool description</div><p>I can&#x27;t confirm or bind a policy with Mercury from here.</p><p class="note">Honest, but says nothing of what a live confirmation involves.</p></div><div class="reply kept"><div class="who">Kept · Repository skill</div><p>Foresee will submit your details to Mercury. Mercury may obtain your credit-based insurance score (a soft pull that doesn&#x27;t affect your credit score), and Mercury may contact you by email or phone. Reply &quot;yes, go ahead&quot; if you agree.</p><p class="note">Foresee&#x27;s consent wording, relayed before anything is sent.</p></div></div></div>
+<div class="stack" style="gap:0.6rem"><p class="ask"><b>Asked:</b> “Which home insurer is cheaper, and by how much per year?”</p><div class="pair"><div class="reply lost"><div class="who">Lost · No instructions</div><p>Its estimated premium is $123.67/month (about $1,484/year), compared with $146.10/month (about $1,753/year) for Autoclub&#x27;s Interinsurance Exchange. That&#x27;s a difference of about $353/year</p><p class="note">$1,753 − $1,484 is $269, not $353: a simple arithmetic slip.</p></div><div class="reply kept"><div class="who">Kept · Tool description</div><p>The difference is $22.43 a month, which comes to $269.16 a year.</p><p class="note">Correct, and it shows the monthly gap it came from.</p></div></div></div>
     </div>
   </section>
 
@@ -438,7 +438,7 @@ footer a { color: var(--muted); }
           <tr><td>Grader: fail</td><td class="num">1</td><td class="num">47</td></tr>
         </tbody>
       </table></div>
-      <p class="small muted">Each label comes from reading the full reply (<code>results/v3/labels.jsonl</code>). The random sample of 44 passes found no misses; the known misses were found outside it. The grader also has 55 unit tests with hand-written good and bad replies, including every counter-example raised in review.</p>
+      <p class="small muted">The labels were reviewed during development by reading each full reply; they were not annotated by an independent evaluator (<code>results/v3/labels.jsonl</code>). The random sample of 44 passes found no misses; the known misses were found outside it. The grader also has 55 unit tests with hand-written good and bad replies, including every counter-example raised in review.</p>
     </div>
   </section>
 
@@ -479,12 +479,12 @@ footer a { color: var(--muted); }
         <div class="step"><b>Evaluate</b><span>276 replies across 4 setups; every failure read.</span></div>
         <div class="step"><b>Review and improve</b><span>Independent reviews, regression tests for each finding, re-scoring.</span></div>
       </div>
-      <p>I work from Arcturus, my multi-agent engineering workstation. Its practices shaped this project: plain-file records of every decision, approval before any external action, a subscription-only model runner with no tools, and review by a different provider than the one that wrote the code. This project was built in a Claude Code session with OpenAI Codex as the independent reviewer, not by Arcturus's automated build pipeline.</p>
+      <p>Developed with AI coding assistants, following the practices of Arcturus, my multi-agent engineering workstation: every decision recorded in plain files, approval before any external action, a model runner with no tools, and code review by a different provider than the one that wrote it.</p>
       <h3>Review history</h3>
       <ul class="list">
         <li><b>Codex review rounds 1 to 3</b> found real issues: checks that were too lenient, two internally inconsistent scenarios, a runner that didn't fail closed, one observation that was unfair to Foresee (removed), and later a bug where Markdown bold read as arithmetic. Each was fixed with a regression test and the results re-scored.</li>
-        <li><b>Final Codex re-check of the grader code: GO.</b> The last bug is fixed and no new must-fix issues were found.</li>
-        <li><b>The expansion to 23 scenarios and this site</b> were also reviewed by a separate Claude reviewer; its findings (a grader regression, a consent check that was unfair to setups without the skill, wording) were fixed.</li>
+        <li><b>Final Codex re-check: GO.</b> It confirmed the last bug fixed and found no must-fix issues in the grading code (<code>bench/</code>). The site, scenarios and results were not part of that check.</li>
+        <li><b>The expansion to 23 scenarios and this site</b> had a separate review; its findings (a grader regression, a consent check that was unfair to setups without the skill, wording) were fixed.</li>
       </ul>
     </div>
   </section>
