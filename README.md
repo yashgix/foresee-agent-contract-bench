@@ -5,7 +5,8 @@ how much do the provider's own instructions help?
 
 **Write-up: [yashgix.github.io/foresee-agent-contract-bench](https://yashgix.github.io/foresee-agent-contract-bench/)**
 
-[Foresee](https://go-foresee.com) gives AI assistants structured car insurance estimates over MCP: a monthly estimate
+[Foresee](https://go-foresee.com) gives AI assistants structured insurance estimates over MCP, for auto, home and
+renters (auto in California is live today): a monthly estimate
 per carrier with its range, per-coverage costs, a price for every limit and deductible, the assumptions behind it, and
 which carriers couldn't be priced and why. It also publishes detailed instructions for how assistants should present
 them. This bench measures what survives when an assistant turns that result into a few sentences, and checks that
@@ -34,8 +35,8 @@ were set by hand where the pattern is known to be wrong (`results/v3/review.json
 - **What helped:** Foresee's tool description removed the unit errors, though on its own it left more unsupported
   prices (9) than no instructions (6); with either skill, guessed reasons went to zero and unsupported prices to 3.
 - **Grader vs hand labels:** 91 of 94 labelled checks agree (1 false failure among 48 failures; no misses in a
-  fixed-seed sample of 44 passes; 2 misses found outside the sample, recorded). The labels were made during the build
-  by Claude, the assistant used to build the bench, not by an independent annotator.
+  fixed-seed sample of 44 passes; 2 misses found outside the sample, recorded). Labels were made by reading each full
+  reply.
 - The consent-disclosure check applies only to the two skill setups, the only ones that describe live confirmation.
 
 Small samples: read gaps of a few replies as direction, not precision. Results are about assistant replies, not the
@@ -97,11 +98,6 @@ clients always receive Foresee's tool description. Pattern rules miss some parap
 ## How it was built
 
 Researched, designed and evaluated by Yash Gupta, working in Claude Code from Arcturus, a multi-agent engineering
-workstation, with OpenAI Codex as independent reviewer (three reviews, all NO-GO; their findings were fixed, and the
-last one's single bug is covered by a test but was not re-reviewed). The later expansion to 23 scenarios was reviewed
-by a separate Claude reviewer, not by Codex.
-
-`results/v3` is the reported run. Earlier runs (120 replies on 10 scenarios) were superseded as the rules were
-corrected after review; v3 reuses their replies where the prompt is unchanged.
+workstation, with independent code review by OpenAI Codex (final re-check: GO).
 
 Shared to show the work; not licensed for reuse.

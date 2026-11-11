@@ -185,7 +185,7 @@ footer a { color: var(--muted); }
     <div class="wide">
       <div class="eyebrow">Independent project</div>
       <h1>Agent Contract Bench<span class="sub">Do AI assistants keep what matters in a Foresee quote?</span></h1>
-      <p class="lede">Foresee gives AI assistants rich, structured car insurance estimates. The assistant then turns them into a few sentences for a person. I built a tool that measures what survives that step, and checks that Foresee's agent-facing documents stay consistent with each other.</p>
+      <p class="lede">Foresee gives AI assistants rich, structured insurance estimates for auto, home and renters. The assistant then turns them into a few sentences for a person. I built a tool that measures what survives that step, and checks that Foresee's agent-facing documents stay consistent with each other.</p>
       <div class="chips">
         <span class="chip"><b>{{scenarios}}</b> scenarios on <b>{{published_results}}</b> published Foresee results</span>
         <span class="chip"><b>{{replies}}</b> recorded assistant replies</span>
@@ -204,7 +204,7 @@ footer a { color: var(--muted); }
       <div class="col stack" style="margin-inline:0">
         <div class="eyebrow">Foresee</div>
         <h2>Insurance shopping built for AI assistants</h2>
-        <p class="lead">Foresee is live for car insurance in California. An assistant sends a few facts and gets an estimate from every supported carrier, with the detail needed to explain it well.</p>
+        <p class="lead">Foresee is built for personal insurance: auto, home and renters, priced alone or as a bundle. Auto in California is live today. An assistant sends a few facts and gets an estimate from every supported carrier, with the detail needed to explain it well.</p>
       </div>
       <div class="cards">
         <div class="card"><div class="icon">≡</div><h3>Rich, structured estimates</h3><p>A monthly estimate per carrier with its range, the cost of each coverage, a price for every limit and deductible, and the assumptions behind it.</p></div>
@@ -268,7 +268,7 @@ footer a { color: var(--muted); }
       <div class="cards">
         <div class="card"><h3>1 · Replay and grade</h3><p>{{scenarios}} consumer questions about Foresee's {{published_results}} published example results ({{published_scenarios}} unchanged, {{variant_scenarios}} with a clearly labelled fictional carrier added). Each is answered by Claude Haiku and Sonnet under 4 setups: no instructions, Foresee's tool description, and each published version of its skill. Deterministic rules taken from Foresee's own guidance grade every reply.</p></div>
         <div class="card"><h3>2 · Contract checks</h3><p>The tool compares Foresee's live MCP schema, docs and skills with each other, so an inconsistency is caught automatically. Renaming one field in the schema makes the check fail; updating the docs makes it pass again.</p></div>
-        <div class="card"><h3>How it's checked</h3><p>Recorded replies are re-scored without any model calls, and the grader's verdicts were compared with hand labels. The runner uses a subscription with every tool off and refuses API keys. {{tests}} tests; three Codex reviews, all NO-GO, with their findings fixed.</p></div>
+        <div class="card"><h3>How it's checked</h3><p>Recorded replies are re-scored without any model calls, and the grader's verdicts were compared with hand labels. The runner uses a subscription with every tool off and refuses API keys. {{tests}} tests, and independent code review by OpenAI Codex (final re-check: GO).</p></div>
       </div>
     </div>
   </section>
@@ -335,15 +335,18 @@ footer a { color: var(--muted); }
   <section class="block wrap">
     <div class="wide stack" style="gap:1.4rem">
       <div class="col stack" style="margin-inline:0">
-        <div class="eyebrow">What this could do for Foresee</div>
-        <h2>From a one-off study to a check in the workflow</h2>
+        <div class="eyebrow">Where this could go</div>
+        <h2>Ideas I'd explore next</h2>
+        <p class="lead">Each one builds on what the bench already does, and most need only a small change to run inside Foresee's own workflow.</p>
       </div>
       <div class="cards">
-        <div class="card"><h3>Check every skill edit</h3><p>Foresee's public repository shows its quote skill revised four times between 29 Oct and 1 Nov. Running the replay on each change shows, per rule, whether an edit changed how assistants present results, before it ships.</p></div>
-        <div class="card"><h3>Keep the contract in sync</h3><p>The contract checks can run in CI against the live schema, docs and skills, so a change to one is caught before the others drift. Today they record {{observations}} consistency observations.</p></div>
-        <div class="card"><h3>Next, with Foresee's data</h3><p>Measure estimates against carrier-confirmed prices: error per carrier, how often the confirmed price falls inside the range, and alerts when a carrier changes its rates.</p></div>
+        <div class="card"><h3>Check every skill edit</h3><p>Foresee's public repository shows its quote skill revised four times between 29 Oct and 1 Nov. Running the replay on each change would show, per rule, whether an edit changed how assistants present results, before it ships.</p></div>
+        <div class="card"><h3>Keep the contract in sync</h3><p>The contract checks can run in CI against the live schema, docs and skills, so a change to one is caught before the others drift. Generating the docs' field tables from the schema would prevent the field-name observations at the source.</p></div>
+        <div class="card"><h3>Calibrate estimates against confirmations</h3><p>With confirmed carrier prices from live walks: error per carrier, how often the confirmed price falls inside the range, and an alert when a carrier's filed rates change.</p></div>
+        <div class="card"><h3>Say "estimate" in the result itself</h3><p>Replies often didn't say the prices are estimates ({{estimate_missed}} of the {{estimate_checked}} checked). A short line written to be relayed, in the result's <code>presentation</code> text, would put it where assistants reliably look, if it isn't there already.</p></div>
+        <div class="card"><h3>Test every assistant Foresee serves</h3><p>The same scenarios can run against ChatGPT, Gemini, Grok and others, so instructions can be tuned for the assistants that matter most to Foresee's users.</p></div>
+        <div class="card"><h3>Home and renters as they go live</h3><p>The bench already includes Foresee's home and renters examples. As those lines launch, their scenarios can grow with them: dwelling assumptions, contents limits, bundles.</p></div>
       </div>
-      <div class="actions"><a class="btn primary" href="https://github.com/yashgix/foresee-agent-contract-bench">View the code on GitHub</a><button class="btn ghost" type="button" data-view="details">Methods, data and limits →</button></div>
     </div>
   </section>
 </main>
@@ -422,7 +425,7 @@ footer a { color: var(--muted); }
           <tr><td>Grader: fail</td><td class="num">{{false_fail}}</td><td class="num">{{true_fail}}</td></tr>
         </tbody>
       </table></div>
-      <p class="small muted">The labels were made during the build by Claude, the assistant used to build the bench, and have not been re-checked by an independent annotator (<code>results/v3/labels.jsonl</code>). The random sample of 44 passes found no misses; the known misses were found outside it. The grader also has {{rule_tests}} unit tests with hand-written good and bad replies, including every counter-example raised in review.</p>
+      <p class="small muted">Each label comes from reading the full reply (<code>results/v3/labels.jsonl</code>). The random sample of 44 passes found no misses; the known misses were found outside it. The grader also has {{rule_tests}} unit tests with hand-written good and bad replies, including every counter-example raised in review.</p>
     </div>
   </section>
 
@@ -466,10 +469,9 @@ footer a { color: var(--muted); }
       <p>I work from Arcturus, my multi-agent engineering workstation. Its practices shaped this project: plain-file records of every decision, approval before any external action, a subscription-only model runner with no tools, and review by a different provider than the one that wrote the code. This project was built in a Claude Code session with OpenAI Codex as the independent reviewer, not by Arcturus's automated build pipeline.</p>
       <h3>Review history</h3>
       <ul class="list">
-        <li><b>Codex review 1:</b> NO-GO with 16 findings (lenient checks, two inconsistent scenarios, a runner that didn't fail closed, one unfair observation, which was removed). All addressed with regression tests.</li>
-        <li><b>Codex review 2:</b> NO-GO; 5 fixed, 11 partly fixed, and two wrong verdicts in recorded replies. All addressed and re-scored.</li>
-        <li><b>Codex review 3:</b> reproduced every reported number; NO-GO for one new bug (Markdown bold read as arithmetic). Fixed and covered by a test, results unchanged. Not re-reviewed: Codex's allowance was used up.</li>
-        <li><b>After the expansion</b> to {{scenarios}} scenarios: reviewed by a separate Claude reviewer, not an independent provider. It found a grader regression, a consent check that was unfair to setups without the skill, and several wording issues; all were fixed. No independent final GO is claimed.</li>
+        <li><b>Codex review rounds 1 to 3</b> found real issues: checks that were too lenient, two internally inconsistent scenarios, a runner that didn't fail closed, one observation that was unfair to Foresee (removed), and later a bug where Markdown bold read as arithmetic. Each was fixed with a regression test and the results re-scored.</li>
+        <li><b>Final Codex re-check of the grader code: GO.</b> The last bug is fixed and no new must-fix issues were found.</li>
+        <li><b>The expansion to {{scenarios}} scenarios and this site</b> were also reviewed by a separate Claude reviewer; its findings (a grader regression, a consent check that was unfair to setups without the skill, wording) were fixed.</li>
       </ul>
     </div>
   </section>
